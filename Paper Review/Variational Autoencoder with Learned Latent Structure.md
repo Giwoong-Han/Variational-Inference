@@ -5,7 +5,7 @@
 
 ## Short Review
 
-1. VAE를 공부하다보면 Prior Distribution에 대한 가정이 필요하다는 문제점이 존재합니다. 하지만 일반적으로 사용하는 Gaussian을 따른다는 가정이 Image Domain에서는 센 가정이 될 수 있다고 생각합니다. 따라서 해당 문제를 해결하기 위하여, 많은 사람들이 다양한 접근을 사용합니다. 필자 또한 마찬가지로 해당 문제를 다양하게 바라보아야 한다는 관점을 가지고 있으며, Prior로 사용하는 Latent Space의 가정을 하나씩 줄여나가는 것을 생각하고 있습니다. (필자는 우선 Eculidean space를 깨는것에 초점을 두고 있습니다.)
+1. VAE를 공부하다보면 Prior Distribution에 대한 가정이 필요하다는 문제점이 존재합니다. 하지만 일반적으로 사용하는 Gaussian을 따른다는 가정이 Image Domain에서는 센 가정이 될 수 있다고 생각합니다. 따라서 해당 문제를 해결하기 위하여, 많은 사람들이 다양한 접근을 합니다. 필자 또한 마찬가지로 해당 문제를 다양하게 바라보아야 한다는 관점을 가지고 있으며, Prior로 사용하는 Latent Space의 가정을 하나씩 줄여나가는 것을 생각하고 있습니다. (필자는 우선 Eculidean space를 깨는것에 초점을 두고 있습니다.)
 
 > * 저자는 Learnable한 Generative Manifold Model을 제안하여 위의 문제를 해결했습니다.
 
