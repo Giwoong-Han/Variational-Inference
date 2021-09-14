@@ -8,15 +8,13 @@
 
 <br>
 
-2. The Variational bound
+2. The Variational bound : VAE를 설계하는 과정에서 가장 중요한 Evidence Lower Bounded(ELBO) term에 대해 자세히 설명합니다.
 
-> * 
+> * 본 논문에서는 총 2가지의 Jensen inequality로 유도한 수식과 log 성질을 이용하여 유도한 수식을 소개하는데, 필자는 log 성질을 이용하여 유도한 수식만을 소개하겠습니다. (결과는 둘 다 동일합니다.)
 
 <br>
 
-3. The reparameterization trick
-
-> * 
+3. The reparameterization trick : 모델을 Backpropagation 하기 위해서는 수식을 미분해야하는데, 확률이 포함된 수식에서는 Parameters(mu, sigma)를 학습할 수 없습니다. 따라서 Monte Carlo Markov Chain(MCMC)과 학습할 Parameters와 random성을 분리한 trick을 이용하여 해결합니다.
 
 <br>
 
