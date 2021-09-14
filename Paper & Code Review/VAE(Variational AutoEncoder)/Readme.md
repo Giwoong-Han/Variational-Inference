@@ -14,7 +14,7 @@
 
 <br>
 
-3. The reparameterization trick : 모델을 Backpropagation 하기 위해서는 수식을 미분해야하는데, 확률이 포함된 수식에서는 Parameters(mu, sigma)를 학습할 수 없습니다. 따라서 Monte Carlo Markov Chain(MCMC)과 학습할 Parameters와 random성을 분리한 trick을 이용하여 해결합니다.
+3. The reparameterization trick : 모델을 Backpropagation 하기 위해서는 수식을 미분해야하는데, 확률이 포함된 수식에서는 Parameters(mu, sigma)를 학습할 수 없습니다. 따라서 Monte Carlo Markov Chain(MCMC)과 학습할 Parameters와 Random성을 분리한 Trick을 이용하여 해결합니다.
 
 <br>
 
