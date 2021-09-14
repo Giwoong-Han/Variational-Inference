@@ -55,5 +55,14 @@ Test_dataset 기준으로 97epochs에서 다음과 같은 결과를 얻었습니
 
 4. Latent Space Results
 
-![Latent_gif_light](https://user-images.githubusercontent.com/82640592/133198505-fe134204-de8d-4d31-9934-dde48f38e8f3.gif)
+2-dim Latent space에 Isotropic한 Zero Mean Normal Distribution을 Prior Distribution으로 정의한 결과입니다.
 
+![Latent_gif_light](https://user-images.githubusercontent.com/82640592/133202586-daa04877-208d-4d35-8fa0-b2df7ef7f2f8.gif)
+
+
+위의 결과는 나름 잘(?) Clustering 되었다라고 생각할 수 있겠지만, 다음과 같은 VAE의 한계점을 볼 수 있습니다.
+또한 각 한계점들을 보완하기위해 다양한 VAE architechure 기반의 방법론들이 연구되고 있습니다.
+
+1) 학습을 하는 과정에서 Prior Distribution을 정의해 주어야 합니다.
+
+> * 우리는 각 Dataset이 Latent space 상에서 어떤 형태의 분포를 이루는지 알 수 없습니다. 또한 안다고 하더라도 해당 pdf를 정의하기가 어렵고, KL-divergence에 적용하여 analytic한 수식을 얻기 어렵습니다.
