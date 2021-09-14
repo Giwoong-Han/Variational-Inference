@@ -74,17 +74,18 @@
 1) 학습을 하는 과정에서 Prior Distribution을 정의해 주어야 합니다.
 
 > * 우리는 각 Dataset이 Latent space 상에서 어떤 형태의 분포를 이루는지 알 수 없습니다. 또한 안다고 하더라도 해당 pdf를 정의하기가 어렵고, KL-Divergence에 적용하여 analytic한 수식을 얻기 어렵습니다.
-> VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution
+
+> * VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution을 Prior Distribution으로 가정하고 시작합니다. 따라서 위 그림처럼 원점(0, 0) 근처에서 원에 가까운 형태로 Clustering되는 것을 볼 수 있습니다.
 
 2) Prior Distribution과 Posterior Distribution의 거리를 측정하는 Metric이 KL-divergence를 사용해야합니다.
 
 > * "이게 왜 한계점이지?"라고 생각할 수 있으나, Deep Learning에서 두 분포간의 거리를 측정할 수 있는 Metric은 다양합니다. (예, Total Variation(TV), Jensen Shannon Divergence(JS), Wasserstein Distance 등) 또한 KL-Divergence는 두 분포가 서로 다른 영역에서 측정된 경우 완전히 다르다라는 판단을 내리게끔 설계되어 있습니다.
 
-> 수식과 그림으로 설명
+> * 수식과 그림으로 설명
 
-> 참고로 GAN의 경우 discriminator의 학습이 잘 죽게되는 원인이기도 합니다.
+> * 참고로 GAN의 경우 discriminator의 학습이 잘 죽게되는 원인이기도 합니다.
 
-> 해당 한계점을 보완하기위해 Wasserstein Auto-Encoders(ICLR 2018)과 같은 방법론이 등장하였습니다.
+> * 해당 한계점을 보완하기위해 Wasserstein Auto-Encoders(ICLR 2018)과 같은 방법론이 등장하였습니다.
 
 <br>
 
