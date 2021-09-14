@@ -35,9 +35,15 @@
 
 2. Loss Results
 
-- Test_dataset 기준으로 97epochs에서 다음과 같은 결과를 얻었습니다.
+- Test_dataset 기준으로 96epochs에서 다음과 같은 결과를 얻었습니다.
 
 ![Loss_results](https://user-images.githubusercontent.com/82640592/133197837-ff01fabe-0edd-4fc9-9086-edad86cc8132.jpg)
+
+<br>
+
+- BCE_loss는 학습을 하는 과정에서 많이 감소했으나, KLD_loss는 오히려 증가했습니다.
+- 하지만 recontruction의 초점에서는 BCE_loss가 낮게 나와야 좋은 결과를 얻을 수 있습니다.
+![loss](https://user-images.githubusercontent.com/82640592/133253606-18c0678c-bc30-43c1-ba88-f01f79961138.jpg)
 
 <br>
 
@@ -51,13 +57,13 @@
 ![1](https://user-images.githubusercontent.com/82640592/133198716-ffe91881-4f91-4caa-a24f-080ca9b01075.jpg)
 ![1](https://user-images.githubusercontent.com/82640592/133198734-05539ffe-f460-48af-b254-861f12631d6e.jpg)
 
-- epoch : 97 (best)
+- epoch : 96 (best)
 
-- BCE_loss: 141.7242, KLD_loss: 6.6025, Total_loss: 148.3267
+- BCE_loss: 141.4159, KLD_loss: 6.5646, Total_loss: 147.9805
 
 
-![97](https://user-images.githubusercontent.com/82640592/133198834-1d42376c-4267-4846-9dba-438a8b48b0cf.jpg)
-![97](https://user-images.githubusercontent.com/82640592/133198820-bc1bcbc9-74ae-4081-99f4-6728dded5107.jpg)
+![96](https://user-images.githubusercontent.com/82640592/133253301-3d299682-ccd4-4d34-b7d0-16fc131eb54e.jpg)
+![96](https://user-images.githubusercontent.com/82640592/133253271-9efc9479-cfa3-4118-9770-e3df4f2e6da2.jpg)
 
 <br>
 
