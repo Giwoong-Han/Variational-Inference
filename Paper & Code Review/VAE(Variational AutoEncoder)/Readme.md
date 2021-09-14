@@ -77,6 +77,10 @@
 
 > * VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution을 Prior Distribution으로 가정하고 시작합니다. 따라서 위 그림처럼 원점(0, 0) 근처에서 원에 가까운 형태로 Clustering되는 것을 볼 수 있습니다.
 
+> * Latent Structure를 반영 -> Poincare VAE, Hypersphere VAE, Mixture manifold VAE
+
+<br>
+
 2) Prior Distribution과 Posterior Distribution의 거리를 측정하는 Metric이 KL-divergence를 사용해야합니다.
 
 > * "이게 왜 한계점이지?"라고 생각할 수 있으나, Deep Learning에서 두 분포간의 거리를 측정할 수 있는 Metric은 다양합니다. (예, Total Variation(TV), Jensen Shannon Divergence(JS), Wasserstein Distance 등) 또한 KL-Divergence는 두 분포가 서로 다른 영역에서 측정된 경우 완전히 다르다라는 판단을 내리게끔 설계되어 있습니다.
@@ -90,3 +94,5 @@
 <br>
 
 3) 목적에 적합한 최적의 Latent dim, Feature Extraction을 위한 Neural Network 설계에 대한 설명이 없습니다.
+
+> * VQ-VAE, VAELLS
