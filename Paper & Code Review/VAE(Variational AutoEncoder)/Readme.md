@@ -77,7 +77,11 @@
 
 > * VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution을 Prior Distribution으로 가정하고 시작합니다. 따라서 위 그림처럼 원점(0, 0) 근처에서 원에 가까운 형태로 Clustering되는 것을 볼 수 있습니다.
 
-> * Latent Structure를 반영 -> Poincare VAE, Hypersphere VAE, Mixture manifold VAE
+> * 또한 Latent Structure의 정보를 반영하기위해 Curvature가 0(Euclidean space)이 아닌 Hyperbolic Space(음의 Curvature)나 Spherical Space(양의 Curvature) 위에서 정의한 Latent Space를 사용하는 방법론이 등장하였습니다.
+
+>> - Hyperspherical Variational Auto-Encoders (UAI 2018)
+>> - Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders (NeurIPS 2019)
+>> - Mixed-curvature Variational Autoencoders (ICLR 2020)
 
 <br>
 
