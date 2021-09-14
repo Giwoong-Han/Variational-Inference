@@ -22,6 +22,7 @@
 
 ## Methods
 
+Deep Latent Variable Model(DLVM)에 해당하는 모델 중 하나인 VAE는 다음과 같이 Log likelihood P(D|Θ)를 최대화하는 Parameter(Θ)를 찾고자 합니다.
 
 ## Code Review
 
