@@ -39,14 +39,31 @@ test_loader = test_loader(args, kwargs, dataset='mnist')
 os.environ['KMP_DUPLICATE_LIB_OK']='True' # plt error 방지
 
 if __name__ == "__main__":
+    best_loss = 10000
+    best_epochs = 1
+
+    BCE_loss_list = []
+    KLD_loss_list = []
+    Total_loss_list = []
+
     for epoch in range(1, args.epochs + 1):
         train(model, optimizer, device, args, loss_function, epoch, train_loader)
-        test(model, device, args, loss_function, epoch, test_loader)
+        test_BCE_loss, test_KLD_loss, test_Total_loss = test(model, device, args, loss_function, epoch, test_loader)
 
         latent = []
         latent_mu = []
         targets = []
         i = 0
+
+        BCE_loss_list.append(test_BCE_loss)
+        KLD_loss_list.append(test_KLD_loss)
+        Total_loss_list.append(test_Total_loss)
+
+        if test_Total_loss < best_loss :
+            best_loss = test_Total_loss
+            best_epochs = epoch
+            print('best_epochs_saved \n')
+
         with torch.no_grad():
             '''
             latent 시각화 :batch_size * 40 개의 samples를 뽑아서 확인
@@ -79,11 +96,11 @@ if __name__ == "__main__":
             plt.figure(figsize=(15,6))
             plt.subplot(1,2,1)
             plt.scatter(latent[:,0], latent[:,1], c=targets, cmap='jet')
-            plt.title('Z Sample',fontsize=20);plt.colorbar();plt.grid()
+            plt.title(f'Z Sample epochs : {epoch}',fontsize=20);plt.colorbar();plt.grid()
             plt.xlim([-4,4]); plt.ylim([-4,4]);
             plt.subplot(1,2,2)
             plt.scatter(latent_mu[:,0], latent_mu[:,1], c=targets, cmap='jet')
-            plt.title('Z mu',fontsize=20);plt.colorbar();plt.grid()
+            plt.title(f'Z mu epochs : {epoch}',fontsize=20);plt.colorbar();plt.grid()
             plt.xlim([-4,4]); plt.ylim([-4,4]);
             plt.savefig(f'latent/{epoch}.jpg')
 
@@ -106,12 +123,32 @@ if __name__ == "__main__":
             for i in range(n_sample):
                 plt.subplot(1,n_sample,i+1)
                 plt.imshow(x_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
-            fig.suptitle("Training Inputs",fontsize=20);
+            fig.suptitle(f'Training Inputs epochs : {epoch}',fontsize=20);
             plt.savefig(f'input/{epoch}.jpg')
             
             fig = plt.figure(figsize=(15,3))
             for i in range(n_sample):
                 plt.subplot(1,n_sample,i+1)
                 plt.imshow(recon_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
-            fig.suptitle("Reconstructed Inputs",fontsize=20);
+            fig.suptitle(f'Reconstructed Inputs epochs : {epoch}',fontsize=20);
             plt.savefig(f'recon/{epoch}.jpg')
+    
+    print(f'best_epochs : {best_epochs}, best_loss : {best_loss}')
+
+    '''
+    Loss Graph 시각화
+    '''
+    fig, loss_ax = plt.subplots()
+    # acc_ax = loss_ax.twinx()
+
+    loss_ax.plot(BCE_loss_list, 'b', label = 'BCE loss')
+    loss_ax.plot(KLD_loss_list, 'y', label = 'KLD loss')
+    loss_ax.plot(Total_loss_list, 'r', label = 'Total loss')
+
+    loss_ax.set_xlabel('epoch')
+    loss_ax.set_ylabel('loss')
+
+    loss_ax.legend(loc='upper left')
+    # acc_ax.legend(loc='lower left')
+
+    plt.savefig('loss.jpg')
