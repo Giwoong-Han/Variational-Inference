@@ -46,8 +46,11 @@
 
 - 해당 수식은 3개의 Term인 Reconstruction Term, Prior Fitting Term, Unable to calculate Term으로 구분할 수 있습니다. 우선 3번 수식은 q의 분포를 가정한다고 하더라도, 실제 분포에 해당하는 p분포를 알 수 없습니다. 즉, 계산이 불가능합니다. 따라서 해당 수식은 무시하고 1번 수식을 Maximize, 2번 수식을 Minimize하여 간접적으로 전체 수식을 Maximize하는 효과를 주려합니다. (3번 수식은 KL-Divergence이므로 항상 0보다는 크거나 같습니다. 즉, 우리가 다루고자하는 전체 수식은 3번 수식을 제외한 lower bounded로 표현할 수 있습니다. 이 부분이 위에서 언급한 Jensen inequality로 유도한 수식과 같아지는 부분입니다.)
 
+<br>
 
 2) The reparameterization trick
+
+- 1번 수식에 해당하는 Reconstruction Term의 미분을 계산하기 위해서는 Expectation 부분을 조정해주어야 합니다.
 
 ## Code Review
 
