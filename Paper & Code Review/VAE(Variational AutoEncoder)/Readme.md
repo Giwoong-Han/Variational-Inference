@@ -126,7 +126,7 @@
 
 > * 참고로 GAN의 경우 discriminator의 학습이 잘 죽게되는 원인이기도 합니다.
 
-> * 해당 한계점을 보완하기위해 Wasserstein Auto-Encoders(ICLR 2018)과 같은 방법론이 등장하였습니다.
+> * 해당 한계점을 보완하기위해 Wasserstein Auto-Encoders (ICLR 2018)과 같은 방법론이 등장하였습니다.
 
 <br>
 
