@@ -8,13 +8,13 @@
 
 <br>
 
-2. The Variational bound : VAE를 설계하는 과정에서 가장 중요한 Evidence Lower Bounded(ELBO) term에 대해 자세히 설명합니다.
+2. The Variational Bound : VAE를 설계하는 과정에서 가장 중요한 Evidence Lower Bounded(ELBO) term에 대해 자세히 설명합니다.
 
 > * 본 논문에서는 총 2가지의 Jensen inequality로 유도한 수식과 log 성질을 이용하여 유도한 수식을 소개하는데, 필자는 log 성질을 이용하여 유도한 수식만을 소개하겠습니다. (결과는 둘 다 동일합니다.)
 
 <br>
 
-3. The reparameterization trick : 모델을 Backpropagation 하기 위해서는 수식을 미분해야하는데, 확률이 포함된 수식에서는 미분하여 Parameters(mu, sigma)를 학습할 수 없습니다. 따라서 Monte Carlo Markov Chain(MCMC)과 학습할 Parameters와 Random성을 분리한 Trick을 이용하여 해결합니다.
+3. The Reparameterization Trick : 모델을 Backpropagation 하기 위해서는 수식을 미분해야하는데, 확률이 포함된 수식에서는 미분하여 Parameters(mu, sigma)를 학습할 수 없습니다. 따라서 Monte Carlo Markov Chain(MCMC)과 학습할 Parameters와 Random성을 분리한 Trick을 이용하여 해결합니다.
 
 <br>
 
@@ -32,7 +32,7 @@
 
 <br>
 
-1) The Variational bound
+1) The Variational Bound
 
 증명 설명 + 그림 추가
 
@@ -48,9 +48,9 @@
 
 <br>
 
-2) The reparameterization trick
+2) The Reparameterization Trick
 
-- 1번 수식에 해당하는 Reconstruction Term의 미분을 계산하기 위해서는 Expectation 부분을 조정해주어야 합니다.
+- 1번 수식에 해당하는 Reconstruction Term의 미분을 계산하기 위해서는 Expectation 부분을 조정해주어야 합니다. 저자는 Reparameterization Trick을 사용하여 Latent Space에서 Sampling하는 과정에서 학습하고자하는 Parameter(mu, sigma)와 Random에 해당하는 부분(N(0,1)을 따르는 epsilon)을 분리하여 미분이 가능한 곱과 합으로 사용합니다. 또한 코드에서는 Binary Cross Entropy(BCE) Loss를 이용하여 Reconstruction을 위한 Loss로 사용할 수 있습니다.
 
 ## Code Review
 
