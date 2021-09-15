@@ -40,7 +40,7 @@
 
 <br>
 
-- 위의 결과로 부터 얻은 수식은 다음과 같습니다.
+- 위의 결과로 부터 얻은 수식을 정리하면 .
 
 ![ELBO](https://user-images.githubusercontent.com/82640592/133383094-1a984bcf-a4c9-40a0-9f43-8e22c8e823c5.jpg)
 
