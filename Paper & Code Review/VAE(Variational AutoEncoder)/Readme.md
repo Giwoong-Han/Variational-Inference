@@ -22,7 +22,13 @@
 
 ## Methods
 
-Deep Latent Variable Model(DLVM)에 해당하는 모델 중 하나인 VAE는 다음과 같이 Log likelihood P(D|Θ)를 최대화하는 Parameter(Θ)를 찾고자 합니다.
+- Deep Latent Variable Models(DLVM)에 해당하는 모델 중 하나인 VAE는 다음과 같이 Log likelihood P(D|Θ)를 최대화하는 Parameter(Θ)를 찾고자 합니다. 해당 수식에 Encoder와 Decoder를 포함한 수식을 포함하여 변형 후 목적함수를 정의합니다.
+
+- VAE는 Prior을 Isotropic한 Gaussian으로 가정한다는 부분이 필요합니다. Isotropic한 Gaussian이 무엇인지 보다 자세히 설명하자면, 아래 그림과 같은 2-dims Multivariate Normal Distribution의 예시를 보실 수 있습니다. 우리가 사용하고자 하는 Dataset Space를 X라고 생각하면, Encoder를 통해 Latent Z-space로 축소한 후 다시 Decoder를 통하여 X-space로 이동시키는 학습을 하고자합니다. 여기서 Z-space를 원과 같은 모양으로 가정하는데, 평균이 원의 중점의 위치(Zero-mean)하고 covariance Matrix를 다음과 같이 identity matrix로 정의합니다. 즉, 원의 중점에서 각 방향으로의 퍼진 정도가 모두 동일하다는 가정이 Isotropic한 가정이라고 말할 수 있습니다.
+
+<br>
+
+![DLVM](https://user-images.githubusercontent.com/82640592/133379210-8a2175cc-7b67-4eba-872f-343885ea2074.jpg)
 
 ## Code Review
 
