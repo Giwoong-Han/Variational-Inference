@@ -34,7 +34,7 @@
 
 1) The Variational Bound
 
-- 수식에 Encoder와 Posterior를 추가하여 변형합니다.
+- 수식에 Encoder와 Posterior를 추가하여 변형합니다. 두 분포를 비교하기위한 Metric으로 사용하는 KL-Divergence는 항상 0보다 크거나 같기 때문에 다음과 같은 Evidence Lower Bounded(ELBO)를 얻을 수 있습니다.
 
 ![Proof](https://user-images.githubusercontent.com/82640592/133431259-3700c999-8589-4623-8a86-d9248cefed62.jpg)
 
