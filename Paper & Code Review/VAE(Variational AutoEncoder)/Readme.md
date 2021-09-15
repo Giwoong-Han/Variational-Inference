@@ -28,7 +28,16 @@
 
 <br>
 
-![DLVM](https://user-images.githubusercontent.com/82640592/133379210-8a2175cc-7b67-4eba-872f-343885ea2074.jpg)
+![DLVM](https://user-images.githubusercontent.com/82640592/133383304-74cebd37-cd8d-40c1-9f70-00e0b48f3586.jpg)
+
+<br>
+
+1) The Variational bound
+
+![ELBO](https://user-images.githubusercontent.com/82640592/133383094-1a984bcf-a4c9-40a0-9f43-8e22c8e823c5.jpg)
+
+
+2) The reparameterization trick
 
 ## Code Review
 
