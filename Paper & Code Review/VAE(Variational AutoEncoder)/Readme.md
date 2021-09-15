@@ -34,7 +34,7 @@
 
 1) The Variational Bound
 
-수식에 Encoder와 Posterior를 추가하여 변형합니다.
+- 수식에 Encoder와 Posterior를 추가하여 변형합니다.
 
 ![Proof](https://user-images.githubusercontent.com/82640592/133431259-3700c999-8589-4623-8a86-d9248cefed62.jpg)
 
