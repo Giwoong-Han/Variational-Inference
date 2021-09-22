@@ -1,6 +1,7 @@
 # Wasserstein Auto-Encoders
 
 - Ilya Tolstikhin, Olivier Bousquet, Sylvain Gelly, Bernhard Schoelkopf
+- Published at ICLR 2018.
 
 ## Short Review
 
