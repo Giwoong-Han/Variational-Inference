@@ -110,7 +110,7 @@
 
 > * 우리는 각 Dataset이 Latent space 상에서 어떤 형태의 분포를 이루는지 알 수 없습니다. 또한 안다고 하더라도 해당 pdf를 정의하기가 어렵고, KL-Divergence에 적용하여 analytic한 수식을 얻기 어렵습니다.
 
-> * VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution을 Prior Distribution으로 가정하고 시작합니다. 따라서 위 그림처럼 원점(0, 0) 근처에서 원에 가까운 형태로 Clustering되는 것을 볼 수 있습니다.
+> * VAE는 사용하기 쉬운 Isotropic Zero Mean Normal Distribution을 Prior Distribution으로 가정하고 시작합니다. 따라서 위 그림처럼 원점(0, 0) 근처에서 타원에 가까운 형태로 Clustering되는 것을 볼 수 있습니다.
 
 > * 또한 Latent Structure의 정보를 반영하기위해 Curvature가 0(Euclidean space)이 아닌 Hyperbolic Space(음의 Curvature)나 Spherical Space(양의 Curvature) 위에서 정의한 Latent Space를 사용하는 방법론이 등장하였습니다.
 
