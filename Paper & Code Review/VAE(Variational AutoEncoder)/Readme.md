@@ -122,7 +122,7 @@
 
 2) Prior Distribution과 Posterior Distribution의 Discrepancy를 측정하는 Metric이 KL-divergence를 사용해야합니다.
 
-> * "이게 왜 한계점이지?"라고 생각할 수 있으나, Deep Learning에서 두 분포간의 Discrepancy를 측정할 수 있는 Metric은 다양합니다. (예, Total Variation(TV), Jensen Shannon Divergence(JS), Wasserstein Distance 등) 또한 KL-Divergence는 두 분포가 서로 다른 영역에서 측정된 경우 완전히 다르다라는 판단을 내리게끔 설계되어 있습니다.
+> * "이게 왜 한계점이지?"라고 생각할 수 있으나, Deep Learning에서 두 분포간의 Discrepancy를 측정할 수 있는 Metric은 다양합니다. (예, 다양한 f-Divergences : Total Variation(TV), Jensen Shannon Divergence(JS), Wasserstein Distance 등) 또한 KL-Divergence는 두 분포가 서로 다른 영역에서 측정된 경우 완전히 다르다라는 판단을 내리게끔 설계되어 있습니다.
 
 > * 참고로 GAN의 경우 discriminator의 학습이 잘 죽게되는 원인이기도 합니다.
 
