@@ -2,9 +2,9 @@
 
 ## 1. Paper & Code Review
 
-1) VAE
+1) Variational AutoEncoder (VAE)
 
-2) WAE
+2) Wasserstein AutoEncoder (WAE)
 
 ## 2. Paper Review
 
