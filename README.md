@@ -2,10 +2,10 @@
 
 ## 1. Paper & Code Review
 
-- VAE
+1) VAE
 
-- WAE
+2) WAE
 
 ## 2. Paper Review
 
-- VAELES
+1) Variational Autoencoder with Learned Latent Structure (VAELLS)
