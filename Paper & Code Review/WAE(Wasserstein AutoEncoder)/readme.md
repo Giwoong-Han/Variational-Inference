@@ -19,7 +19,7 @@
 
 <br>
 
-3. Kantorovich-Rubinstein Duality를 이용하여 Optimal Transport(OP) 문제를 두 확률분포의 Joint Distribution을 알지 못해도  수 있습니다.
+3. Kantorovich-Rubinstein Duality를 이용하여 Optimal Transport(OP) 문제를 두 확률분포의 Joint Distribution을 알지 못해도 적용할 수 있습니다.
 
 > * Cost Function이 1-Lipschitz Fuction이라는 제약조건만 만족하면 WAE를 적용하는데는 큰 문제가 없습니다.
 
