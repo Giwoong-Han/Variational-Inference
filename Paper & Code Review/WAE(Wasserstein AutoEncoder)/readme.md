@@ -24,3 +24,15 @@
 > * Cost Function이 1-Lipschitz Fuction이라는 제약조건만 만족하면 WAE를 적용하는데는 큰 문제가 없습니다.
 
 ## Methods
+
+1. VAE에서의 Encoder의 문제점
+
+> * 2가지의 상충되는 목표를 당성하도록 학습 (두 가지 설명 추가)
+
+2. Optimal Transport(OT)
+
+> 1) Kantorovich's formulation
+
+> 2) Kantorovich-Rubinstein duality
+
+> 3) D-WAE -> cost function, Dz 종류 
