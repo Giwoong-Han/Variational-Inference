@@ -27,7 +27,7 @@
 
 1. VAE에서의 Encoder의 문제점
 
-> * 2가지의 상충되는 목표를 당성하도록 학습 (두 가지 설명 추가)
+> * 2가지의 상충되는 목표를 달성하도록 학습 (두 가지 설명 추가)
 
 2. Optimal Transport(OT)
 
@@ -36,3 +36,15 @@
 > 2) Kantorovich-Rubinstein duality
 
 > 3) D-WAE -> cost function, Dz 종류 
+
+## Code Review
+
+1. main.py 에서의 나머지 params는 default로 학습한 결과입니다.
+
+`python main.py --epochs 100 --log_interval 30`
+
+<br>
+
+2. Loss Results
+
+- Test_dataset 기준으로 96epochs에서 다음과 같은 결과를 얻었습니다.
