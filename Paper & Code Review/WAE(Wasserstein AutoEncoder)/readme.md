@@ -29,11 +29,17 @@
 
 > * 기존의 VAE는 2가지의 상반되는 목표를 학습하도록 설계되었습니다.
 
->> ① 우리가 임의로 지정한 Isotropic Zero Mean Gaussian Distribution을 Latent의 True Distribution이라 가정하고, Encoder가 Latent Distribution과 유사한 Posterior Distribution을 따르도록 합니다.
+>> ① 우리가 임의로 지정한 Isotropic Zero Mean Gaussian Distribution을 Latent의 True Distribution이라 가정하고, Encoder가 Latent Distribution과 유사한 Posterior Distribution을 따르도록  학습합니다. (Prior Fitting Term)
 
->> ②
+>> ② Input에 넣었던 이미지를 잘 복원하도록 Encoder가 학습합니다. (Reconstruction Term)
+
+> * 그러나 아래 그림처럼 인코더의 관점에서 바라보면 ①, ②번에 해당하는 Term들이 서로가 서로에게 도움을 주기 보다는 어느정도 타협을 하는 선에서 전체적인 Loss를 줄여가면서 상반되게 학습을 한다고 볼 수 있습니다. (필자의 실험에서도 전체적인 Loss는 감소하지만 KL-Divergence는 오히려 증가했습니다.)
+
+<br>
 
 ![VAE_problem](https://user-images.githubusercontent.com/82640592/135067651-e4f8947a-c8d1-46bf-aac9-93c018fdf39b.jpg)
+
+<br>
 
 2. Optimal Transport(OT)
 
