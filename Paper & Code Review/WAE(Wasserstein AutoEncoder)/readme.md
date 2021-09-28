@@ -27,6 +27,8 @@
 
 1. VAE에서의 Encoder의 문제점
 
+![VAE_problem](https://user-images.githubusercontent.com/82640592/135067328-12cf4cc7-c343-4208-8995-9a1704a8caca.jpg)
+
 > * 2가지의 상충되는 목표를 달성하도록 학습 (두 가지 설명 추가)
 
 2. Optimal Transport(OT)
