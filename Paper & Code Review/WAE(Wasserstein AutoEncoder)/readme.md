@@ -65,12 +65,12 @@
 
 ## Code Review
 
-1. main.py 에서의 나머지 params는 default로 학습한 결과입니다.
+1. main.py.
 
-`python main.py --epochs 100 --log_interval 30`
+`python main.py`
 
 <br>
 
 2. Loss Results
 
-- Test_dataset 기준으로 96epochs에서 다음과 같은 결과를 얻었습니다.
+- 
