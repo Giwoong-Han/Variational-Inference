@@ -47,7 +47,7 @@
 
 2. Optimal Transport(OT)
 
-> * WAE는 Coupling Theory에서 두 Probability Space가 주어졌을 때, 그 Space들을 어떤 곱의 형태로 한 번에 표현하고자하는 Probability Measure의 관점에서 시작합니다. 그 중 Optimal Transport Problem에서 유도되는 다음과 같은 수식을 이용하여 저자는 새롭게 적용하였습니다.
+> * WAE는 Coupling Theory에서 두 Probability Space가 주어졌을 때, 그 Space들을 어떤 곱의 형태로 한 번에 표현하고자하는 Probability Measure의 관점에서 시작합니다. 그 중 Optimal Transport cost에서 유도되는 다음과 같은 수식을 이용하여 저자는 새롭게 적용하였습니다.
 
 >> ① Kantorovich's formulation
 
