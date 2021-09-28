@@ -47,11 +47,21 @@
 
 2. Optimal Transport(OT)
 
-> 1) Kantorovich's formulation
+> * WAE는 Coupling Theory에서 두 Probability Space가 주어졌을 때, 그 Space들을 어떤 곱의 형태로 한 번에 표현하고자하는 Probability Measure의 관점에서 시작합니다. 그 중 Optimal Transport Problem에서 유도되는 다음과 같은 수식을 이용하여 저자는 새롭게 적용하였습니다.
 
-> 2) Kantorovich-Rubinstein duality
+>> ① Kantorovich's formulation
 
-> 3) D-WAE -> cost function, Dz 종류 
+그림 설명
+
+>> ② Kantorovich-Rubinstein duality
+
+그림 설명
+
+>> ③ D-WAE
+
+그림 설명
+
+> -> cost function, Dz 종류 
 
 ## Code Review
 
