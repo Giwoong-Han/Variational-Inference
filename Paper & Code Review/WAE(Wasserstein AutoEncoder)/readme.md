@@ -51,13 +51,37 @@
 
 >> ① Kantorovich's formulation
 
-그림 설명
+<br>
+
+![Kantorovich_form](https://user-images.githubusercontent.com/82640592/135085524-007c00f4-40d4-40fe-81be-601f4ac9a9d8.jpg)
+
+<br>
+
+설명
 
 >> ② Kantorovich-Rubinstein duality
 
-그림 설명
+<br>
+
+![Kantorovich_dual](https://user-images.githubusercontent.com/82640592/135090151-cf0d6585-64fa-45d5-88a6-26832d7d47c0.jpg)
+
+<br>
+
+설명
 
 >> ③ D-WAE
+
+<br>
+
+![thm1](https://user-images.githubusercontent.com/82640592/135090176-c23eb0f0-b0d9-4488-9ace-1082f7ccccab.jpg)
+
+<br>
+
+<br>
+
+![WAE](https://user-images.githubusercontent.com/82640592/135090195-f4635d24-856a-4063-ad03-f5b60a86b920.png)
+
+<br>
 
 그림 설명
 
