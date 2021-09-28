@@ -35,6 +35,12 @@
 
 > * 그러나 아래 그림처럼 인코더의 관점에서 바라보면 ①, ②번에 해당하는 Term들이 서로가 서로에게 도움을 주기 보다는 어느정도 타협을 하는 선에서 전체적인 Loss를 줄여가면서 상반되게 학습을 한다고 볼 수 있습니다. (필자의 실험에서도 전체적인 Loss는 감소하지만 KL-Divergence는 오히려 증가했습니다.)
 
+> * WAE는 위의 단점을 어느정도 보완하여 설계되어 있습니다. 각 데이터가 개별적으로 Prior에 유사하도록 강제하는 것이 아닌 전체에 해당하는 Continuous Mixture Distribution가 유사하도록 설계하여 서로 다른 구분의 데이터들이 Latent상에서도 서로 멀리 위치하도록 학습할 수 있습니다.
+
+<br>
+
+![Conti](https://user-images.githubusercontent.com/82640592/135079337-fd85caa8-975c-40a2-92d6-61d7e58c62a2.jpg)
+
 <br>
 
 ![VAE_problem](https://user-images.githubusercontent.com/82640592/135067651-e4f8947a-c8d1-46bf-aac9-93c018fdf39b.jpg)
