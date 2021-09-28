@@ -27,9 +27,13 @@
 
 1. VAE에서의 Encoder의 문제점
 
-![VAE_problem](https://user-images.githubusercontent.com/82640592/135067328-12cf4cc7-c343-4208-8995-9a1704a8caca.jpg)
+> * 기존의 VAE는 2가지의 상반되는 목표를 학습하도록 설계되었습니다.
 
-> * 2가지의 상충되는 목표를 달성하도록 학습 (두 가지 설명 추가)
+>> ① 우리가 임의로 지정한 Isotropic Zero Mean Gaussian Distribution을 Latent의 True Distribution이라 가정하고, Encoder가 Latent Distribution과 유사한 Posterior Distribution을 따르도록 합니다.
+
+>> ②
+
+![VAE_problem](https://user-images.githubusercontent.com/82640592/135067651-e4f8947a-c8d1-46bf-aac9-93c018fdf39b.jpg)
 
 2. Optimal Transport(OT)
 
