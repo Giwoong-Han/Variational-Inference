@@ -37,8 +37,6 @@
 
 > * WAE는 위의 단점을 어느정도 보완하여 설계되어 있습니다. 각 데이터가 개별적으로 Prior에 유사하도록 강제하는 것이 아닌 전체에 해당하는 Continuous Mixture Distribution가 유사하도록 설계하여 서로 다른 구분의 데이터들이 Latent상에서도 서로 멀리 위치하도록 학습할 수 있습니다.
 
-<br>
-
 ![Conti](https://user-images.githubusercontent.com/82640592/135079337-fd85caa8-975c-40a2-92d6-61d7e58c62a2.jpg)
 
 <br>
