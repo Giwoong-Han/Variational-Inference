@@ -85,7 +85,14 @@
 
 그림 설명
 
-> -> cost function, Dz 종류 
+> -> cost function,
+
+> Dz 종류 : MMD, GAN
+
+-> MMD : kernel trick 사용 
+
+1) Inverse Multi Quadric(IMQ) kernel
+2) Gaussian(RBF) kernel
 
 ## Code Review
 
