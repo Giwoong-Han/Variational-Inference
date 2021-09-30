@@ -1,11 +1,9 @@
 import torch
-from torchvision.utils import save_image
 
 def test(model, device, args, loss_function, epoch, test_loader):
     model.eval()
     test_BCE_loss = 0
     test_KLD_loss = 0
-    best_loss = 0
     with torch.no_grad():
         for i, (data, _) in enumerate(test_loader):
             data = data.to(device)
