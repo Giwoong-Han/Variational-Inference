@@ -107,4 +107,11 @@
 ![loss](https://user-images.githubusercontent.com/82640592/135604963-097c057d-8f2a-4dd9-8a9a-4680bab93196.jpg)
 
 
-- 
+
+
+3. X_input vs Reconstruction
+
+IMQ kernel
+epoch : 1
+
+REC_loss: 4.7463, MMD_loss: 2.2928, Total_loss: 149.5766
