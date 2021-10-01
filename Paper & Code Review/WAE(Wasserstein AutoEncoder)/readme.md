@@ -104,4 +104,7 @@
 
 2. Loss Results
 
+![loss](https://user-images.githubusercontent.com/82640592/135604963-097c057d-8f2a-4dd9-8a9a-4680bab93196.jpg)
+
+
 - 
