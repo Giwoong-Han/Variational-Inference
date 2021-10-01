@@ -111,7 +111,20 @@
 
 3. X_input vs Reconstruction
 
-IMQ kernel
-epoch : 1
+- IMQ kernel
+- epoch : 1
 
-REC_loss: 4.7463, MMD_loss: 2.2928, Total_loss: 149.5766
+![1](https://user-images.githubusercontent.com/82640592/135609108-4e59f7b9-ec04-4b72-a5e4-19bcb270e404.jpg)
+![1](https://user-images.githubusercontent.com/82640592/135612209-f9a44ff4-a229-4869-9269-1feb395331a8.jpg)
+
+- REC_loss: 4.7463, MMD_loss: 2.2928, Total_loss: 149.5766
+
+<br>
+
+- IMQ kernel
+- epoch : 56
+
+![56](https://user-images.githubusercontent.com/82640592/135612141-88b4fab0-2fa5-4705-a3a8-8f312e005ffb.jpg)
+![56](https://user-images.githubusercontent.com/82640592/135612234-d85372be-3617-4c95-9b20-79236eb4f9c6.jpg)
+
+- REC_loss: 3.9924, MMD_loss: -0.4666, Total_loss: -0.6732
