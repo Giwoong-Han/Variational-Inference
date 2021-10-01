@@ -129,3 +129,7 @@
 
 ![56](https://user-images.githubusercontent.com/82640592/135612141-88b4fab0-2fa5-4705-a3a8-8f312e005ffb.jpg)
 ![56](https://user-images.githubusercontent.com/82640592/135612234-d85372be-3617-4c95-9b20-79236eb4f9c6.jpg)
+
+
+4. Latent Space Results
+- 2-dim Latent space에 z_fake(prior)을 Normal Distribution N(0, 1)으로 부터 무작위 값을 뽑은 값으로 사용하였습니다.
