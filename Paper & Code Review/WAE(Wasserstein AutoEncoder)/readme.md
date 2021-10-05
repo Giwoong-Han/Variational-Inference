@@ -167,7 +167,7 @@
 
 3. X_input vs Reconstruction
 
-> ① MMD & Gaussian Dist
+> ① MMD & Gaussian
 
 >> epoch : 1
 >> REC_loss: 5.1177, MMD_loss: 38.4637, Total_loss: 43.5814
@@ -201,6 +201,29 @@
 
 ![83](https://user-images.githubusercontent.com/82640592/136035535-4b1c427c-2cbf-4eae-8fdb-53ff9992b33a.jpg)
 ![83](https://user-images.githubusercontent.com/82640592/136035616-444100b7-771b-4a5d-b919-3eb29572234a.jpg)
+
+<br>
+
+> ③ GAN & Gaussian
+
+>> epoch : 1
+>>
+
+![1](https://user-images.githubusercontent.com/82640592/136036544-bcd67a59-572d-4969-b011-39baf6e8f3e4.jpg)
+![1](https://user-images.githubusercontent.com/82640592/136036324-d712aee0-30eb-4657-a5ca-0f8bbd5e67e2.jpg)
+
+
+<br>
+
+>> epoch : 83
+>> 
+
+![29](https://user-images.githubusercontent.com/82640592/136036494-65c00ad0-a044-498c-ae9f-7e89791dee16.jpg)
+![29](https://user-images.githubusercontent.com/82640592/136036424-e3a5857d-38c7-462b-9d1f-b00c06c57c7c.jpg)
+
+> ④ GAN & Sphere
+
+>> 9epoch 이후 Gradient Exploding이 발생하였습니다.
 
 <br>
 
