@@ -100,7 +100,7 @@
 
 ① GAN-based
 
-> GAN에서 주로 사용하는 jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
+> GAN에서 주로 사용하는 Jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
 
 <br>
 
@@ -120,7 +120,10 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 1. main.py.
 
-`python main.py`
+`python main.py -batch_size 128 -n_z 2 -Pz normal -Dz GAN`
+`python main.py -batch_size 128 -n_z 2 -Pz sphere -Dz GAN`
+`python main.py -batch_size 128 -n_z 2 -Pz normal -Dz MMD`
+`python main.py -batch_size 128 -n_z 2 -Pz sphere -Dz MMD`
 
 <br>
 
