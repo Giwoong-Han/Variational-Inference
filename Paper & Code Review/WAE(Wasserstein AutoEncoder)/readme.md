@@ -90,11 +90,21 @@
 
 <br>
 
-저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다.
+저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다. 논문에서 사용한 Cost Fuction은 L2-norm을 사용하였고, Dz(Qz,Pz) term을 다음과 같이 두 가지 형태의 방법을 제시합니다.
 
-> -> cost function,
+3. MMD-based & GAN-based
 
-> Dz 종류 : MMD, GAN
+① GAN-based
+
+> GAN에서 주로 사용하는 jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
+
+<br>
+
+![Dr](https://user-images.githubusercontent.com/82640592/136020366-e28074d1-5ba2-41a6-a3d8-d761f5b366c8.jpg)
+
+<br>
+
+② MMD-based
 
 -> MMD : kernel trick 사용 
 
