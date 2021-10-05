@@ -50,7 +50,7 @@
 
 > * WAE는 Coupling Theory에서 두 Probability Space가 주어졌을 때, 그 Space들을 어떤 곱의 형태로 한 번에 표현하고자하는 Probability Measure의 관점에서 시작합니다. 그 중 Optimal Transport cost에서 유도되는 다음과 같은 수식을 이용하여 저자는 새롭게 적용하였습니다.
 
->> ① Kantorovich's formulation
+>> ① Kantorovich's Formulation
 
 <br>
 
@@ -62,7 +62,7 @@
 
 <br>
 
->> ② Kantorovich-Rubinstein duality
+>> ② Kantorovich-Rubinstein Duality
 
 <br>
 
@@ -70,7 +70,9 @@
 
 <br>
 
-설명
+그 중에서 위와 같은 Duality를 만족하면 두 분포의 Joint Distribution을 구하는 어려운 문제를 풀지 않아도 해결할 수 있습니다.
+
+<br>
 
 >> ③ D-WAE
 
@@ -80,13 +82,15 @@
 
 <br>
 
+②번의 Duality덕분에 ①번의 Kantorovich's Formulation을 보다 다루기 쉬운 Form으로 변형할 수 있습니다. 이는 VAE의 관점에서 바라보면 동일하게 Prior Fitting Term과 Reconstruction Term이 포함된 수식으로 볼 수 있습니다.
+
 <br>
 
 ![WAE](https://user-images.githubusercontent.com/82640592/135090195-f4635d24-856a-4063-ad03-f5b60a86b920.png)
 
 <br>
 
-그림 설명
+저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다.
 
 > -> cost function,
 
