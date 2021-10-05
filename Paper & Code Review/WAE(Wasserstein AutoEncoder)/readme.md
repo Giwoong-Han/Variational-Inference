@@ -112,11 +112,23 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 ② MMD-based
 
-1) Inverse Multi Quadric(IMQ) kernel
+<br>
 
-2) Gaussian(RBF) kernel
+![MMD](https://user-images.githubusercontent.com/82640592/136028714-80158bb8-ba11-4941-b352-643229e3c66f.jpg)
 
-논문에서는 IMQ kernel만 사용하였는데, 그 이유는 Gaussian(RBF) kernel이 Quick Tail Decay 문제가 있어서 outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
+<br>
+
+1) Inverse Multi Quadric(IMQ) Kernel
+
+<br>
+
+![IMQ](https://user-images.githubusercontent.com/82640592/136028721-7a3b3318-3b49-4ec3-b879-45a851121784.jpg)
+
+<br>
+
+2) Gaussian(RBF) Kernel
+
+논문에서는 IMQ Kernel만 사용하였는데, 그 이유는 Gaussian(RBF) Kernel이 Quick Tail Decay Problem이 있어서 Outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ Kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
 
 ## Code Review
 
