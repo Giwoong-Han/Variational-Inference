@@ -58,7 +58,7 @@
 
 <br>
 
-위의 수식은 두 개의 Random Variable이 만드는 모든 Joint Distribution Space에서 어떤 Cost Function을 줄이는 문제를 풀고자 합니다.
+> * 위의 수식은 두 개의 Random Variable이 만드는 모든 Joint Distribution Space에서 어떤 Cost Function을 줄이는 문제를 풀고자 합니다.
 
 <br>
 
@@ -70,7 +70,7 @@
 
 <br>
 
-그 중에서 위와 같은 Duality를 만족하면 두 분포의 Joint Distribution을 구하는 어려운 문제를 풀지 않아도 해결할 수 있습니다.
+> * 그 중에서 위와 같은 Duality를 만족하면 두 분포의 Joint Distribution을 구하는 어려운 문제를 풀지 않아도 해결할 수 있습니다.
 
 <br>
 
@@ -82,7 +82,7 @@
 
 <br>
 
-②번의 Duality덕분에 ①번의 Kantorovich's Formulation을 보다 다루기 쉬운 Form으로 변형할 수 있습니다. 이는 VAE의 관점에서 바라보면 동일하게 Prior Fitting Term과 Reconstruction Term이 포함된 수식으로 볼 수 있습니다.
+> * ②번의 Duality덕분에 ①번의 Kantorovich's Formulation을 보다 다루기 쉬운 Form으로 변형할 수 있습니다. 이는 VAE의 관점에서 바라보면 동일하게 Prior Fitting Term과 Reconstruction Term이 포함된 수식으로 볼 수 있습니다.
 
 <br>
 
@@ -90,7 +90,7 @@
 
 <br>
 
-저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다. 논문에서 사용한 Cost Fuction은 L2-norm을 사용하였고, Dz(Qz,Pz) term을 다음과 같이 두 가지의 방법으로 해결하고자 합니다.
+> * 저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다. 논문에서 사용한 Cost Fuction은 L2-norm을 사용하였고, Dz(Qz,Pz) term을 다음과 같이 두 가지의 방법으로 해결하고자 합니다.
 
 <br>
 
@@ -98,19 +98,22 @@
 
 <br>
 
-① GAN-based
+> * ① GAN-based
 
-> GAN에서 주로 사용하는 Jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
-
-<br>
-
-![Dr](https://user-images.githubusercontent.com/82640592/136020366-e28074d1-5ba2-41a6-a3d8-d761f5b366c8.jpg)
+>> * GAN에서 주로 사용하는 Jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
 
 <br>
 
-Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disciminator의 lr를 Decoder의 절반으로 설정하여 Overfitting을 방지하였습니다.
+![Dr](https://user-images.githubusercontent.com/82640592/136030861-422851b6-01e6-45a9-8bd5-d936f6216a67.jpg)
 
-② MMD-based
+<br>
+
+>> * Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disciminator의 lr를 Decoder의 절반으로 설정하여 Overfitting을 방지하였습니다.
+
+> * ② MMD-based
+
+>> * 파생되는 모든 moment들을 비교하는 것은 힘들다.. (Gaussian kernel의 tayler expansion의 예시가 kernel의 형태로 사용될 수 있는 이유 -> moment의 합이 됨.)
+>> * 그림추가
 
 <br>
 
@@ -118,7 +121,9 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 <br>
 
-1) Inverse Multi Quadric(IMQ) Kernel
+>> * 해당 내용을 논문에서는 위와 같이 Hibert Space에서 적분과 각각의 Marginal Probability를 이용하여 기술하였습니다.
+
+>> * ②-1  Inverse Multi Quadric(IMQ) Kernel
 
 <br>
 
@@ -126,9 +131,13 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 <br>
 
-2) Gaussian(RBF) Kernel
+>>> * 설명
 
-논문에서는 IMQ Kernel만 사용하였는데, 그 이유는 Gaussian(RBF) Kernel이 Quick Tail Decay Problem이 있어서 Outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ Kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
+<br>
+
+>> * ②-2 Gaussian(RBF) Kernel
+
+>>> * 논문에서는 IMQ Kernel만 사용하였는데, 그 이유는 Gaussian(RBF) Kernel이 Quick Tail Decay Problem이 있어서 Outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ Kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
 
 ## Code Review
 
