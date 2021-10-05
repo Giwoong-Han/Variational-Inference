@@ -112,6 +112,8 @@
 
 >> * Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disciminator의 lr를 Decoder의 절반으로 설정하여 Overfitting을 방지하였습니다.
 
+<br>
+
 > * ② MMD-based
 
 <br>
@@ -127,6 +129,8 @@
 
 >> * 해당 내용을 논문에서는 위와 같이 Hibert Space에서 적분과 각각의 Marginal Probability를 이용하여 기술하였습니다.
 
+<br>
+
 >> * ②-1  Inverse Multi Quadric(IMQ) Kernel
 
 <br>
@@ -140,6 +144,8 @@
 <br>
 
 >> * ②-2 Gaussian(RBF) Kernel
+
+<br>
 
 >>> * 논문에서는 IMQ Kernel만 사용하였는데, 그 이유는 Gaussian(RBF) Kernel이 Quick Tail Decay Problem이 있어서 Outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ Kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
 
