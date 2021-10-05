@@ -184,5 +184,25 @@
 ![54](https://user-images.githubusercontent.com/82640592/136035033-e81853fa-bc58-4453-9cf7-a9148939ab1b.jpg)
 ![54](https://user-images.githubusercontent.com/82640592/136034965-a51a3323-9482-46fe-b566-955b6257355c.jpg)
 
+<br>
+
+> ② MMD & Sphere
+
+>> epoch : 1
+>> REC_loss: 5.2891, MMD_loss: 21.9796, Total_loss: 27.2687
+
+![1](https://user-images.githubusercontent.com/82640592/136035508-20487ba6-f5a9-43e1-87b4-59864f60086c.jpg)
+![1](https://user-images.githubusercontent.com/82640592/136035598-71643ea2-b195-4cdc-b2e1-e6d9d0720f45.jpg)
+
+<br>
+
+>> epoch : 83
+>> REC_loss: 4.4387, MMD_loss: -1.1336, Total_loss: 3.3051
+
+![83](https://user-images.githubusercontent.com/82640592/136035535-4b1c427c-2cbf-4eae-8fdb-53ff9992b33a.jpg)
+![83](https://user-images.githubusercontent.com/82640592/136035616-444100b7-771b-4a5d-b919-3eb29572234a.jpg)
+
+<br>
+
 4. Latent Space Results
 - 2-dim Latent space에 z_fake(prior)을 Normal Distribution N(0, 1)으로 부터 무작위 값을 뽑은 값으로 사용하였습니다.
