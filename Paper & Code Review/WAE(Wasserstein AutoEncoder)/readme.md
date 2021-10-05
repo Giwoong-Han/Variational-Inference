@@ -58,7 +58,7 @@
 
 <br>
 
-위의 수식을 설명하자면 두 개의 Random Variable이 만드는 모든 Joint Distribution Space에서 어떤 Cost Function을 줄이는 문제를 풀고자 합니다.
+위의 수식은 두 개의 Random Variable이 만드는 모든 Joint Distribution Space에서 어떤 Cost Function을 줄이는 문제를 풀고자 합니다.
 
 <br>
 
