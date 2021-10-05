@@ -116,6 +116,8 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 2) Gaussian(RBF) kernel
 
+논문에서는 IMQ kernel만 사용하였는데, 그 이유는 Gaussian(RBF) kernel이 Quick Tail Decay 문제가 있어서 outlier에 더 많은 패널티를 부여하지 않도록 보다 Heavier Tail을 가지는 IMQ kernel만 사용하였습니다. (두 분포를 그려보면 꼬리 부분이 IMQ가 훨씬 두껍습니다.)
+
 ## Code Review
 
 1. main.py.
