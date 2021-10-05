@@ -14,8 +14,9 @@
 2. VAE의 단점인 Blurry한 Samples을 만들어내는 문제점을 보완하기 위하여 GAN을 적용하는 기법들이 등장하였는데, WAE는 GAN Loss를 사용한 가장 대표적인 연구인 Adversarial Autoencoder(AAE)의 General한 방법입니다.
 
 > * 필자는 VAE를 사용함에 있어서 제약 조건이 다양하다고 지적하였는데 그 중 Loss수식에서 해당 논문은 다음과 같은 자유도를 제시할 수 있습니다.
->> * ① 일반적으로 사용하는 L2-norm 뿐만 아닌 다양한 Cost Fuction이 사용가능합니다.
->> * ② 두 분포간의 Discrepancy를 구하는 함수를 다양하게 사용할 수 있습니다.
+>> * ① 두 분포간의 Discrepancy를 구하는 함수를 다양하게 사용할 수 있습니다. (저자는 Generative Adverserial Networks(GAN)기반과 Maximum Mean Discrepancy(MMD)기반을 사용했습니다.)
+>> * ② 다양한 Kernel 함수를 이용하여 MMD loss에 적용할 수 있다. (저자는 RBF(Gaussian)와 Inverse Multi Quadric(IMQ)를 제안합니다.)
+>> * ③ Prior 분포를 Gaussian Distribution만 사용할 필요가 없다.
 
 <br>
 
