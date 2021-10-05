@@ -100,6 +100,8 @@
 
 > * ① GAN-based
 
+<br>
+
 >> * GAN에서 주로 사용하는 Jensen-Shannon divergence를 이용하여 Discriminator를 학습합니다.
 
 <br>
@@ -111,6 +113,8 @@
 >> * Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disciminator의 lr를 Decoder의 절반으로 설정하여 Overfitting을 방지하였습니다.
 
 > * ② MMD-based
+
+<br>
 
 >> * 파생되는 모든 moment들을 비교하는 것은 힘들다.. (Gaussian kernel의 tayler expansion의 예시가 kernel의 형태로 사용될 수 있는 이유 -> moment의 합이 됨.)
 >> * 그림추가
