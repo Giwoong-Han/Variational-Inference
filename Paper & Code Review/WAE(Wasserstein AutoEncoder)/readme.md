@@ -167,24 +167,22 @@
 
 3. X_input vs Reconstruction
 
-- IMQ kernel
-- epoch : 1
-- REC_loss: 4.7463, MMD_loss: 2.2928, Total_loss: 149.5766
+> ① MMD & Gaussian Dist
 
-![1](https://user-images.githubusercontent.com/82640592/135609108-4e59f7b9-ec04-4b72-a5e4-19bcb270e404.jpg)
-![1](https://user-images.githubusercontent.com/82640592/135612209-f9a44ff4-a229-4869-9269-1feb395331a8.jpg)
+>> epoch : 1
+>> REC_loss: 5.1177, MMD_loss: 38.4637, Total_loss: 43.5814
 
+![1](https://user-images.githubusercontent.com/82640592/136035014-f34f2d12-1f27-4e3f-9c40-8af2802e8a90.jpg)
+![1](https://user-images.githubusercontent.com/82640592/136034926-1f5da177-098a-4f34-a273-08570fa62484.jpg)
 
 
 <br>
 
-- IMQ kernel
-- epoch : 56
-- REC_loss: 3.9924, MMD_loss: -0.4666, Total_loss: -0.6732
+>> epoch : 54
+>> REC_loss: 4.2470, MMD_loss: -3.5604, Total_loss: 0.6866
 
-![56](https://user-images.githubusercontent.com/82640592/135612141-88b4fab0-2fa5-4705-a3a8-8f312e005ffb.jpg)
-![56](https://user-images.githubusercontent.com/82640592/135612234-d85372be-3617-4c95-9b20-79236eb4f9c6.jpg)
-
+![54](https://user-images.githubusercontent.com/82640592/136035033-e81853fa-bc58-4453-9cf7-a9148939ab1b.jpg)
+![54](https://user-images.githubusercontent.com/82640592/136034965-a51a3323-9482-46fe-b566-955b6257355c.jpg)
 
 4. Latent Space Results
 - 2-dim Latent space에 z_fake(prior)을 Normal Distribution N(0, 1)으로 부터 무작위 값을 뽑은 값으로 사용하였습니다.
