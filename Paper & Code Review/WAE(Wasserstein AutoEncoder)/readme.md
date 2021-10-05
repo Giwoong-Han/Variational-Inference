@@ -120,10 +120,7 @@ Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disc
 
 1. main.py.
 
-`python main.py -batch_size 128 -n_z 2 -Pz normal -Dz GAN`
-`python main.py -batch_size 128 -n_z 2 -Pz sphere -Dz GAN`
-`python main.py -batch_size 128 -n_z 2 -Pz normal -Dz MMD`
-`python main.py -batch_size 128 -n_z 2 -Pz sphere -Dz MMD`
+`python main.py -batch_size 128 -n_z 2 -Pz normal[sphere] -Dz GAN[MMD]`
 
 <br>
 
