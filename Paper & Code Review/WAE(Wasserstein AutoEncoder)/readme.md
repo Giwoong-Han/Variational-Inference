@@ -90,7 +90,7 @@
 
 <br>
 
-저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다. 논문에서 사용한 Cost Fuction은 L2-norm을 사용하였고, Dz(Qz,Pz) term을 다음과 같이 두 가지 형태의 방법을 제시합니다.
+저자는 Numerical한 Solution을 얻을 수 있도록 Qz와 Pz가 유사해지는 Term을(마치 VAE의 Prior Fitting Term처럼) 강제로 제약시켜 위와 같은 최종 수식으로 WAE의 목적함수를 정의합니다. 논문에서 사용한 Cost Fuction은 L2-norm을 사용하였고, Dz(Qz,Pz) term을 다음과 같이 두 가지의 방법으로 해결하고자 합니다.
 
 3. MMD-based & GAN-based
 
@@ -104,11 +104,12 @@
 
 <br>
 
+Disciminator와 Encoder, Decoder를 서로 번갈아 학습하고 저자는 Disciminator의 lr를 Decoder의 절반으로 설정하여 Overfitting을 방지하였습니다.
+
 ② MMD-based
 
--> MMD : kernel trick 사용 
-
 1) Inverse Multi Quadric(IMQ) kernel
+
 2) Gaussian(RBF) kernel
 
 ## Code Review
