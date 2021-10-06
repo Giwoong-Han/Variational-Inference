@@ -178,11 +178,11 @@
 
 <br>
 
->> epoch : 54
->> REC_loss: 4.2470, MMD_loss: -3.5604, Total_loss: 0.6866
+>> epoch : 100
+>> REC_loss: 4.0441, MMD_loss: 0.6215, Total_loss: 4.6656
 
-![54](https://user-images.githubusercontent.com/82640592/136035033-e81853fa-bc58-4453-9cf7-a9148939ab1b.jpg)
-![54](https://user-images.githubusercontent.com/82640592/136034965-a51a3323-9482-46fe-b566-955b6257355c.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136144980-ac9242de-ac2c-4b7e-add1-8252389cbfad.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136144992-a59f066d-9904-458f-9943-72915f59c0c4.jpg)
 
 <br>
 
@@ -196,18 +196,18 @@
 
 <br>
 
->> epoch : 83
->> REC_loss: 4.4387, MMD_loss: -1.1336, Total_loss: 3.3051
-
-![83](https://user-images.githubusercontent.com/82640592/136035535-4b1c427c-2cbf-4eae-8fdb-53ff9992b33a.jpg)
-![83](https://user-images.githubusercontent.com/82640592/136035616-444100b7-771b-4a5d-b919-3eb29572234a.jpg)
+>> epoch : 100
+>> REC_loss: 4.3482, MMD_loss: 1.3615, Total_loss: 5.7096
+ 
+![100](https://user-images.githubusercontent.com/82640592/136145119-b92ca560-f422-4047-9bd8-8d8ae6f7ce44.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136145109-ca31ab89-ac5e-42a4-b9d7-12781ad96ae0.jpg)
 
 <br>
 
 > ③ GAN & Gaussian
 
 >> epoch : 1
->>
+>> REC_loss: 6.3179, Dz_loss: 270.8663, Total_loss: 277.1842
 
 ![1](https://user-images.githubusercontent.com/82640592/136036544-bcd67a59-572d-4969-b011-39baf6e8f3e4.jpg)
 ![1](https://user-images.githubusercontent.com/82640592/136036324-d712aee0-30eb-4657-a5ca-0f8bbd5e67e2.jpg)
@@ -215,11 +215,11 @@
 
 <br>
 
->> epoch : 83
->> 
+>> epoch : 100
+>> REC_loss: 5.0200, Dz_loss: 265.0048, Total_loss: 270.0248
 
-![29](https://user-images.githubusercontent.com/82640592/136036494-65c00ad0-a044-498c-ae9f-7e89791dee16.jpg)
-![29](https://user-images.githubusercontent.com/82640592/136036424-e3a5857d-38c7-462b-9d1f-b00c06c57c7c.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136145370-44899545-f01f-4d23-848b-79f037f14b5d.jpg)
 
 > ④ GAN & Sphere
 
