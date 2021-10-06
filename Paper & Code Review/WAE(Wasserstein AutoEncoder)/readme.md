@@ -159,9 +159,21 @@
 
 2. Loss Results
 
-- Test_dataset 기준으로 56epochs에서 Best 성능이 나왔습니다.
+> ① MMD & Gaussian
 
-![loss](https://user-images.githubusercontent.com/82640592/135604963-097c057d-8f2a-4dd9-8a9a-4680bab93196.jpg)
+![loss_normal_MMD](https://user-images.githubusercontent.com/82640592/136145789-62c59cbd-20a1-4225-a0c7-ddd5f00ba6e3.jpg)
+
+> ② MMD & Sphere
+
+![loss_sphere_MMD](https://user-images.githubusercontent.com/82640592/136145796-994cbdf1-d8c6-4dee-b644-09e43496bd24.jpg)
+
+> ③ GAN & Gaussian
+
+![loss_normal_GAN](https://user-images.githubusercontent.com/82640592/136145802-7978a6bd-a688-4e0f-ab7c-a71dcb16d6c7.jpg)
+
+> ④ GAN & Sphere
+
+>> 9epoch 이후 Gradient Exploding이 발생하였습니다.
 
 <br>
 
@@ -170,6 +182,7 @@
 > ① MMD & Gaussian
 
 >> epoch : 1
+
 >> REC_loss: 5.1177, MMD_loss: 38.4637, Total_loss: 43.5814
 
 ![1](https://user-images.githubusercontent.com/82640592/136035014-f34f2d12-1f27-4e3f-9c40-8af2802e8a90.jpg)
@@ -179,6 +192,7 @@
 <br>
 
 >> epoch : 100
+
 >> REC_loss: 4.0441, MMD_loss: 0.6215, Total_loss: 4.6656
 
 ![100](https://user-images.githubusercontent.com/82640592/136144980-ac9242de-ac2c-4b7e-add1-8252389cbfad.jpg)
@@ -189,6 +203,7 @@
 > ② MMD & Sphere
 
 >> epoch : 1
+
 >> REC_loss: 5.2891, MMD_loss: 21.9796, Total_loss: 27.2687
 
 ![1](https://user-images.githubusercontent.com/82640592/136035508-20487ba6-f5a9-43e1-87b4-59864f60086c.jpg)
@@ -197,6 +212,7 @@
 <br>
 
 >> epoch : 100
+
 >> REC_loss: 4.3482, MMD_loss: 1.3615, Total_loss: 5.7096
  
 ![100](https://user-images.githubusercontent.com/82640592/136145119-b92ca560-f422-4047-9bd8-8d8ae6f7ce44.jpg)
@@ -207,6 +223,7 @@
 > ③ GAN & Gaussian
 
 >> epoch : 1
+
 >> REC_loss: 6.3179, Dz_loss: 270.8663, Total_loss: 277.1842
 
 ![1](https://user-images.githubusercontent.com/82640592/136036544-bcd67a59-572d-4969-b011-39baf6e8f3e4.jpg)
@@ -216,6 +233,7 @@
 <br>
 
 >> epoch : 100
+
 >> REC_loss: 5.0200, Dz_loss: 265.0048, Total_loss: 270.0248
 
 ![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
