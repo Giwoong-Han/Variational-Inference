@@ -118,16 +118,18 @@
 
 <br>
 
->> * 파생되는 모든 moment들을 비교하는 것은 힘들다.. (Gaussian kernel의 tayler expansion의 예시가 kernel의 형태로 사용될 수 있는 이유 -> moment의 합이 됨.)
->> * 그림추가
-
-<br>
-
 ![MMD](https://user-images.githubusercontent.com/82640592/136028714-80158bb8-ba11-4941-b352-643229e3c66f.jpg)
 
 <br>
 
 >> * 해당 내용을 논문에서는 위와 같이 Hibert Space에서 적분과 각각의 Marginal Probability를 이용하여 기술하였습니다.
+
+<br>
+
+>> * 파생되는 모든 moment들을 비교하는 것은 힘들다.. (Gaussian kernel의 tayler expansion의 예시가 kernel의 형태로 사용될 수 있는 이유 -> moment의 합이 됨.)
+>> * 그림추가
+
+<br>
 
 <br>
 
