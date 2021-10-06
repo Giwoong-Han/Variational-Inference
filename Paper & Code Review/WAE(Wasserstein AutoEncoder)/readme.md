@@ -239,11 +239,30 @@
 ![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
 ![100](https://user-images.githubusercontent.com/82640592/136145370-44899545-f01f-4d23-848b-79f037f14b5d.jpg)
 
-> ④ GAN & Sphere
-
->> 9epoch 이후 Gradient Exploding이 발생하였습니다.
-
 <br>
 
 4. Latent Space Results
-- 2-dim Latent space에 z_fake(prior)을 Normal Distribution N(0, 1)으로 부터 무작위 값을 뽑은 값으로 사용하였습니다.
+
+> ① MMD & Gaussian
+
+<br>
+
+![normal_MMD](https://user-images.githubusercontent.com/82640592/136150763-48e6ea86-5c67-490b-abee-549f82127dde.gif)
+
+<br>
+
+> ② MMD & Sphere
+
+<br>
+
+![sphere_MMD](https://user-images.githubusercontent.com/82640592/136150827-8634ddf5-60c9-42fd-88a1-4a1371358bde.gif)
+
+<br>
+
+> ③ GAN & Gaussian
+
+<br>
+
+![normal_GAN](https://user-images.githubusercontent.com/82640592/136150855-4ab973c4-fbd9-4f45-bf1a-47026120182c.gif)
+
+<br>
