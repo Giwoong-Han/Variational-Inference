@@ -245,24 +245,12 @@
 
 > ① MMD & Gaussian
 
-<br>
-
 ![normal_MMD](https://user-images.githubusercontent.com/82640592/136150763-48e6ea86-5c67-490b-abee-549f82127dde.gif)
-
-<br>
 
 > ② MMD & Sphere
 
-<br>
-
 ![sphere_MMD](https://user-images.githubusercontent.com/82640592/136150827-8634ddf5-60c9-42fd-88a1-4a1371358bde.gif)
-
-<br>
 
 > ③ GAN & Gaussian
 
-<br>
-
 ![normal_GAN](https://user-images.githubusercontent.com/82640592/136150855-4ab973c4-fbd9-4f45-bf1a-47026120182c.gif)
-
-<br>
