@@ -122,12 +122,13 @@
 
 <br>
 
->> * 해당 내용을 논문에서는 위와 같이 Hibert Space에서 적분과 각각의 Marginal Probability를 이용하여 기술하였습니다.
+>> * 해당 내용을 논문에서는 위와 같이 Reproducing Kernel Hilbert Space(RKHS)에서 적분과 각각의 Marginal Probability를 이용하여 기술하였습니다.
 
 <br>
 
->> * 파생되는 모든 moment들을 비교하는 것은 힘들다.. (Gaussian kernel의 tayler expansion의 예시가 kernel의 형태로 사용될 수 있는 이유 -> moment의 합이 됨.)
->> * 그림추가
+>> * 모르는 두 분포의 Discrepancy를 구하는 가장 쉬운 방법은 서로의 Expectation을 비교하는 것 일겁니다. 하지만 Expectation만 비교하기에는 두 분포가 가진 특성을 잘 비교했다고 말하기는 어렵습니다. 따라서 각 분포에서 파생되는 Moment들을 모두 비교하기 위해서 Kernel을 이용한 Maximum Mean Discrepancy(MMD)을 구하고자 합니다. 다음의 Gaussian Kernel의 예시를 보시면 Kernel이 두 분포로 부터 얻은 Moment의 차의 합으로 표현됨을 알 수 있습니다.
+
+
 
 <br>
 
