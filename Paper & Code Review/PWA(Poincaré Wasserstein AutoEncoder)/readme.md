@@ -1,7 +1,7 @@
 # Poincaré Wasserstein AutoEncoder
 
 - Ivan Ovinnikov
-- Reject ICLR 2020
+- Rejected at ICLR 2020
 
 ## Short Review
 
