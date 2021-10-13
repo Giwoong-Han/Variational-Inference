@@ -257,3 +257,61 @@
 > ③ GAN & Gaussian
 
 ![normal_GAN](https://user-images.githubusercontent.com/82640592/136150855-4ab973c4-fbd9-4f45-bf1a-47026120182c.gif)
+
+<br>
+
+5. CIFAR10
+
+> Latent Dimension을 64로 설정하고 실험한 결과입니다.
+
+> ① MMD & Gaussian
+
+>> REC_loss: 12.2893, MMD_loss: 2.1517, Total_loss: 14.4410
+
+![1](https://user-images.githubusercontent.com/82640592/137117189-6d95ff9b-bac9-4732-bb11-2bdad427831a.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137117193-90650dd0-c447-4fc9-bdd6-310f4d1148db.jpg)
+
+<br>
+
+![100](https://user-images.githubusercontent.com/82640592/137117207-3cc0ccc2-5944-4d83-bf3e-4b5a9559b35d.jpg)
+![100](https://user-images.githubusercontent.com/82640592/137117226-f74d59b1-1e0f-4884-8612-5c5758bd2e0c.jpg)
+
+<br>
+
+> ② MMD & Sphere
+
+>> REC_loss: 12.6358, MMD_loss: 4.0119, Total_loss: 16.6477
+
+![1](https://user-images.githubusercontent.com/82640592/137117273-ee1b57d2-a3d0-4d23-951e-76618a6e070a.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137117288-db3b155a-bb11-43f8-908d-10a7301627d4.jpg)
+
+<br>
+
+![100](https://user-images.githubusercontent.com/82640592/137117319-cc1c20f3-0333-4b5c-bfa5-3ef50c504d05.jpg)
+![100](https://user-images.githubusercontent.com/82640592/137117346-7a63c5fd-2673-41c5-a65c-ac8b074aec5c.jpg)
+
+> ③ GAN & Gaussian
+
+>> REC_loss: 14.4658, Dz_loss: 266.0779, Total_loss: 280.5437
+
+![1](https://user-images.githubusercontent.com/82640592/137117564-fb24e304-7cbc-4f98-8ca8-6451de740c8b.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137117571-ca9588d4-6f1a-4d9b-a56b-d24f14512b64.jpg)
+
+<br>
+
+![100](https://user-images.githubusercontent.com/82640592/137117577-bbb50755-06da-4019-9af7-0dae2ead0121.jpg)
+![100](https://user-images.githubusercontent.com/82640592/137117587-b7690d34-1525-4787-adcd-3a3bbda4afc7.jpg)
+
+<br>
+
+> ④ GAN & Sphere
+
+>> REC_loss: 14.4397, Dz_loss: 201.1274, Total_loss: 215.5670
+
+![1](https://user-images.githubusercontent.com/82640592/137117658-6860d388-6475-4f6f-b6a0-d292f01c2312.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137117670-7312c7ff-421c-4b16-aabc-ae8a10fe040a.jpg)
+
+<br>
+
+![100](https://user-images.githubusercontent.com/82640592/137117699-61332512-5ef3-4abf-8493-6bb2a287dda7.jpg)
+![100](https://user-images.githubusercontent.com/82640592/137117713-060625cf-94ad-4fb1-b731-a4759eb84d9b.jpg)
