@@ -6,7 +6,7 @@
 
 2) Wasserstein AutoEncoder (WAE)
 
-3) Poincare Wasserstein AutoEncoder (PWA)
+3) Poincaré Wasserstein AutoEncoder (PWA)
 
 ## 2. Paper Review
 
