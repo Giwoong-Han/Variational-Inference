@@ -6,6 +6,8 @@
 
 2) Wasserstein AutoEncoder (WAE)
 
+3) Poincare Wasserstein AutoEncoder (PWA)
+
 ## 2. Paper Review
 
 1) Variational Autoencoder with Learned Latent Structure (VAELLS)
