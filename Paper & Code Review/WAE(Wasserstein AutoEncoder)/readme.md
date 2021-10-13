@@ -156,7 +156,7 @@
 
 1. main.py.
 
-`python main.py -batch_size 128 -n_z 2 -Pz normal[sphere] -Dz GAN[MMD]`
+`python main.py -batch_size 128 -n_z 2 -Pz normal[sphere] -Dz GAN[MMD] -n_channel 1[3] -dataset mnist[cifar10]`
 
 <br>
 
