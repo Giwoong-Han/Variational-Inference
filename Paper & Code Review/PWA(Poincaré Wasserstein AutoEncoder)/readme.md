@@ -1,6 +1,7 @@
-# Auto-Encoding Variational Bayes
+# Poincaré Wasserstein AutoEncoder
 
-- Diederik P Kingma, Max Welling
+- Ivan Ovinnikov
+- Reject ICLR 2020
 
 ## Short Review
 
