@@ -308,10 +308,10 @@
 
 >> REC_loss: 14.4397, Dz_loss: 201.1274, Total_loss: 215.5670
 
-![1](https://user-images.githubusercontent.com/82640592/137117658-6860d388-6475-4f6f-b6a0-d292f01c2312.jpg)
-![1](https://user-images.githubusercontent.com/82640592/137117670-7312c7ff-421c-4b16-aabc-ae8a10fe040a.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137118312-7e90e1ac-c867-40f0-9cbe-15c3a7948e0f.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137118323-02507263-0b23-49dd-b130-074be4c5cdd7.jpg)
 
 <br>
 
-![100](https://user-images.githubusercontent.com/82640592/137117699-61332512-5ef3-4abf-8493-6bb2a287dda7.jpg)
-![100](https://user-images.githubusercontent.com/82640592/137117713-060625cf-94ad-4fb1-b731-a4759eb84d9b.jpg)
+![53](https://user-images.githubusercontent.com/82640592/137118279-77d2d2e0-a844-48f8-add2-77dfc1b822a2.jpg)
+![53](https://user-images.githubusercontent.com/82640592/137118289-9a850bed-f53f-4d27-b7c6-1892c731f812.jpg)
