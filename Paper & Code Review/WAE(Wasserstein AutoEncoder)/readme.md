@@ -262,9 +262,9 @@
 
 5. CIFAR10
 
-> Latent Dimension을 64로 설정하고 실험한 결과입니다.
+> * Latent Dimension을 64로 설정하고 실험한 결과입니다.
 
-> 저자는 CelebA 데이터 셋에 대해 WAE-GAN가 더 좋은 FID score을 보여준다고 하였는데, CIFAR10에 대해서는 WAE-MMD가 더 Reconstruction이 잘됨을 확인할 수 있습니다. 따라서 MMD와 GAN 방법론 중에서 절대적으로 특정 방법이 더 좋다고 하기는 어려울 것 같습니다.
+> * 저자는 CelebA 데이터 셋에 대해 WAE-GAN가 더 좋은 FID score을 보여준다고 하였는데, CIFAR10에 대해서는 WAE-MMD가 더 Reconstruction이 잘됨을 확인할 수 있습니다. 따라서 MMD와 GAN 방법론 중에서 절대적으로 특정 방법이 더 좋다고 하기는 어려울 것 같습니다.
 
 > ① MMD & Gaussian
 
