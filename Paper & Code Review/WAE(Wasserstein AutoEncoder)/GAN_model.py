@@ -2,6 +2,7 @@ import torch
 from torch.nn import functional as F
 from torch import nn, optim
 
+# DCGAN architecture
 class Encoder(nn.Module):
     def __init__(self, args):
         super(Encoder, self).__init__()
@@ -51,7 +52,7 @@ class Decoder(nn.Module):
             nn.ConvTranspose2d(self.dim_h * 4, self.dim_h * 2, 4),
             nn.BatchNorm2d(self.dim_h * 2),
             nn.ReLU(True),
-            nn.ConvTranspose2d(self.dim_h * 2, 1, 4, stride=2),
+            nn.ConvTranspose2d(self.dim_h * 2, args.n_channel, 4, stride=2),
             nn.Sigmoid()
         )
 
@@ -62,6 +63,7 @@ class Decoder(nn.Module):
         return x
 
 class Discriminator(nn.Module):
+    # fully connected
     def __init__(self, args):
         super(Discriminator, self).__init__()
 
@@ -78,7 +80,7 @@ class Discriminator(nn.Module):
             nn.ReLU(True),
             nn.Linear(self.dim_h * 4, self.dim_h * 4),
             nn.ReLU(True),
-            nn.Linear(self.dim_h * 4, 1),
+            nn.Linear(self.dim_h * 4, args.n_channel),
             nn.Sigmoid()
         )
 

@@ -34,6 +34,7 @@ parser.add_argument('-Dz', type=str, default='MMD', help= 'MMD or GAN (default: 
 parser.add_argument('-Pz', type=str, default='normal', help= 'normal or sphere (default: normal distribution)')
 parser.add_argument('-no_cuda', action='store_true', default=False, help='disables CUDA training')
 parser.add_argument('-seed', type=int, default=1, metavar='S', help='random seed (default: 1)')
+parser.add_argument('-dataset', type=str, default='mnist', help= '(default: mnist)')
 args = parser.parse_args()
 
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -64,8 +65,8 @@ dec_scheduler = StepLR(dec_optim, step_size=30, gamma=0.5)
 if args.cuda :
     encoder, decoder = encoder.cuda(), decoder.cuda()
 
-train_loader = train_loader(args, kwargs, dataset='mnist')
-test_loader = test_loader(args, kwargs, dataset='mnist')
+train_loader = train_loader(args, kwargs, dataset=args.dataset)
+test_loader = test_loader(args, kwargs, dataset=args.dataset)
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True' # plt error 방지
 
@@ -106,32 +107,32 @@ if __name__ == '__main__' :
             '''
             latent 시각화 : batch_size * 40 개의 samples를 뽑아서 확인
             '''
-            vis_batch_num = 40
-            for batch_x, batch_y in test_loader:
-                latent_z = encoder(batch_x.cuda()).detach().cpu().numpy()
-                label = batch_y.detach().cpu().numpy()
+            if args.n_z == 2 :
+                vis_batch_num = 40
+                for batch_x, batch_y in test_loader:
+                    latent_z = encoder(batch_x.cuda()).detach().cpu().numpy()
+                    label = batch_y.detach().cpu().numpy()
 
-                for x, y in zip(latent_z, label) :
-                    latent.append(x.reshape(2))
-                    targets.append(y)
+                    for x, y in zip(latent_z, label) :
+                        latent.append(x.reshape(2))
+                        targets.append(y)
 
-                if i == vis_batch_num :
-                    break
-                
-                i += 1
+                    if i == vis_batch_num :
+                        break
+                    
+                    i += 1
 
-            '''
-            Test data에 대한 latent space 2차원 시각화
-            '''
-            save_latent = f'./latent/{args.Pz}_{args.Dz}'
-            os.makedirs(save_latent, exist_ok=True)
-            latent = np.array(latent)
-            plt.figure(figsize=(15,13))
-            # plt.subplot(1,2,1)
-            plt.scatter(latent[:,0], latent[:,1], c=targets, cmap='jet')
-            plt.title(f'Z Sample epochs : {epoch}',fontsize=20);plt.colorbar();plt.grid()
-            plt.xlim([-4,4]); plt.ylim([-4,4]);
-            plt.savefig(f'latent/{args.Pz}_{args.Dz}/{epoch}.jpg')
+                save_latent = f'./latent/{args.Pz}_{args.Dz}_{args.dataset}'
+                os.makedirs(save_latent, exist_ok=True)
+                latent = np.array(latent)
+                plt.figure(figsize=(15,13))
+                # plt.subplot(1,2,1)
+                plt.scatter(latent[:,0], latent[:,1], c=targets, cmap='jet')
+                plt.title(f'Z Sample epochs : {epoch}',fontsize=20);plt.colorbar();plt.grid()
+                plt.xlim([-4,4]); plt.ylim([-4,4]);
+                plt.savefig(f'latent/{args.Pz}_{args.Dz}_{args.dataset}/{epoch}.jpg')
+            else :
+                pass
 
             '''
             Test data에 대한 Input vs Reconsturction 시각화
@@ -144,24 +145,30 @@ if __name__ == '__main__' :
                 recon_sample = decoder(z)
                 break
             
-            save_input = f'./input/{args.Pz}_{args.Dz}'
+            save_input = f'./input/{args.Pz}_{args.Dz}_{args.dataset}'
             os.makedirs(save_input, exist_ok=True)
-            save_recon = f'./recon/{args.Pz}_{args.Dz}'
+            save_recon = f'./recon/{args.Pz}_{args.Dz}_{args.dataset}'
             os.makedirs(save_recon, exist_ok=True)
 
             fig = plt.figure(figsize=(15,3))
             for i in range(n_sample):
                 plt.subplot(1,n_sample,i+1)
-                plt.imshow(x_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
+                if args.n_channel == 3 :
+                    plt.imshow(np.transpose((x_sample[i,:].squeeze()/2 + 0.5).detach().cpu().numpy(), (1,2,0)))
+                else :
+                    plt.imshow(x_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
             fig.suptitle(f'Training Inputs epochs : {epoch}',fontsize=20);
-            plt.savefig(f'input/{args.Pz}_{args.Dz}/{epoch}.jpg')
+            plt.savefig(f'input/{args.Pz}_{args.Dz}_{args.dataset}/{epoch}.jpg')
             
             fig = plt.figure(figsize=(15,3))
             for i in range(n_sample):
                 plt.subplot(1,n_sample,i+1)
-                plt.imshow(recon_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
+                if args.n_channel == 3 :
+                    plt.imshow(np.transpose((recon_sample[i,:].squeeze()/2 + 0.5).detach().cpu().numpy(), (1,2,0)))
+                else :
+                    plt.imshow(recon_sample[i,:].reshape(28,28).detach().cpu().numpy(),vmin=0,vmax=1,cmap="gray")
             fig.suptitle(f'Reconstructed Inputs epochs : {epoch}',fontsize=20);
-            plt.savefig(f'recon/{args.Pz}_{args.Dz}/{epoch}.jpg')
+            plt.savefig(f'recon/{args.Pz}_{args.Dz}_{args.dataset}/{epoch}.jpg')
     
     print(f'best_epochs : {best_epochs}, best_loss : {best_loss}')
 
@@ -180,4 +187,4 @@ if __name__ == '__main__' :
     loss_ax.legend(loc='upper left')
     # acc_ax.legend(loc='lower left')
 
-    plt.savefig(f'loss_{args.Pz}_{args.Dz}.jpg')
+    plt.savefig(f'loss_{args.Pz}_{args.Dz}_{args.dataset}.jpg')
