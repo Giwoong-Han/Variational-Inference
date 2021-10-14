@@ -154,6 +154,8 @@
 
 ## Code Review
 
+> MNIST dataset은 0아니면 255에 데이터들이 많이 모여있어서(양극화가 심하다.) 틀린 부분에 대해 더 많은 페널티를 주는 Binary Cross Entropy(BCE) Loss를 Reconstruction Loss로 사용하는 것이 더 복원의 성능이 높고, CIFAR10과 같은 현실 데이터셋은 MSE Loss를 사용하는 것이 더 좋은 결과를 보였습니다.
+
 1. main.py.
 
 `python main.py -batch_size 128 -n_z 2 -Pz normal[sphere] -Dz GAN[MMD] -n_channel 1[3] -dataset mnist[cifar10]`
