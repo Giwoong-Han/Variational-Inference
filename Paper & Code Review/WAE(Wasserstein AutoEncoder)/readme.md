@@ -246,7 +246,7 @@
 
 <br>
 
-> * MMD & Gaussian & BCE Loss (Lambda 1)
+> ① MMD & Gaussian & BCE Loss (Lambda 1)
 
 >> epoch : 1
 
@@ -266,7 +266,7 @@
 
 <br>
 
-> * MMD & Sphere & BCE Loss (Lambda 1)
+> ② MMD & Sphere & BCE Loss (Lambda 1)
 
 >> epoch : 1
 
@@ -286,7 +286,7 @@
 
 <br>
 
-> * GAN & Gaussian & BCE Loss (Lambda 1)
+> ③ GAN & Gaussian & BCE Loss (Lambda 1)
 
 >> epoch : 1
 
@@ -308,6 +308,8 @@
 
 4. Latent Space Results
 
+> * MSE & Lambda 10
+
 > ① MMD & Gaussian
 
 ![normal_MMD](https://user-images.githubusercontent.com/82640592/136150763-48e6ea86-5c67-490b-abee-549f82127dde.gif)
@@ -319,6 +321,22 @@
 > ③ GAN & Gaussian
 
 ![normal_GAN](https://user-images.githubusercontent.com/82640592/136150855-4ab973c4-fbd9-4f45-bf1a-47026120182c.gif)
+
+<br>
+
+> * BCE & Lambda 1
+
+> ① MMD & Gaussian
+
+![MMD_normal_BCE](https://user-images.githubusercontent.com/82640592/137479484-dc6c8a8e-647e-446e-b90f-c5a77c5901d6.gif)
+
+> ② MMD & Sphere
+
+![sphere_MMD_BCE](https://user-images.githubusercontent.com/82640592/137479506-21751df0-072c-4fb2-b3fd-8648418c87d3.gif)
+
+> ③ GAN & Gaussian
+ 
+![normal_GAN_BCE](https://user-images.githubusercontent.com/82640592/137479461-d4e179ac-b9e3-4f3b-9912-b28c49cceb2b.gif)
 
 <br>
 
