@@ -184,7 +184,9 @@
 
 3. X_input vs Reconstruction
 
-> ① MMD & Gaussian
+> * Reconstruction으로 MSE Loss를 사용하고 Lambda를 10으로 설정하여 학습하면 모델은 Reconstruction보다 Latent Space는 Prior을 잘 따라가도록 학습합니다. 반면 BCE Loss를 사용하여 Lambda를 1로 설정하면 기존의 VAE보다 더 잘 Reconstruction하나, Latent Space가 Prior과 다른 결과가 나옴을 확인할 수 있습니다.
+
+> ① MMD & Gaussian & MSE Loss (Lambda 10)
 
 >> epoch : 1
 
@@ -192,7 +194,6 @@
 
 ![1](https://user-images.githubusercontent.com/82640592/136035014-f34f2d12-1f27-4e3f-9c40-8af2802e8a90.jpg)
 ![1](https://user-images.githubusercontent.com/82640592/136034926-1f5da177-098a-4f34-a273-08570fa62484.jpg)
-
 
 <br>
 
@@ -205,7 +206,27 @@
 
 <br>
 
-> ② MMD & Sphere
+> ① MMD & Gaussian & BCE Loss (Lambda 1)
+
+>> epoch : 1
+
+>> REC_loss: 155.5402, MMD_loss: 0.0057, Total_loss: 155.5460
+
+![1](https://user-images.githubusercontent.com/82640592/137476715-61dbf17f-09df-49e3-a88e-d9a127af4049.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137476957-e249db82-0d3e-4b6d-a9cc-20bf57b9a07c.jpg)
+
+<br>
+
+>> epoch : 50
+
+>> REC_loss: 132.1843, MMD_loss: 0.0036, Total_loss: 132.1879
+
+![50](https://user-images.githubusercontent.com/82640592/137476748-61f1bcdc-295c-46f3-b042-046088acdeff.jpg)
+![50](https://user-images.githubusercontent.com/82640592/137476965-dd1c0c5f-3c54-4742-9707-b2ece085d97b.jpg)
+
+<br>
+
+> ② MMD & Sphere & MSE Loss (Lambda 10)
 
 >> epoch : 1
 
@@ -225,7 +246,27 @@
 
 <br>
 
-> ③ GAN & Gaussian
+> ② MMD & Sphere & BCE Loss (Lambda 1)
+
+>> epoch : 1
+
+>> REC_loss: 155.4021, MMD_loss: 0.0096, Total_loss: 155.4117
+
+![1](https://user-images.githubusercontent.com/82640592/137477119-b30eb762-241b-4642-9f88-f24ac7fdece5.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137477261-f0e1f16d-7e23-4924-852e-71c3e119f786.jpg)
+
+<br>
+
+>> epoch : 50
+
+>> REC_loss: 133.4919, MMD_loss: 0.0067, Total_loss: 133.4986
+
+![50](https://user-images.githubusercontent.com/82640592/137477139-e417cc65-970d-4724-8378-bb029661ddc1.jpg)
+![50](https://user-images.githubusercontent.com/82640592/137477273-83bffe4d-b58b-4288-9782-e212baf4406a.jpg)
+
+<br>
+
+> ③ GAN & Gaussian & MSE Loss (Lambda 10)
 
 >> epoch : 1
 
@@ -243,6 +284,26 @@
 
 ![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
 ![100](https://user-images.githubusercontent.com/82640592/136145370-44899545-f01f-4d23-848b-79f037f14b5d.jpg)
+
+<br>
+
+> ③ GAN & Gaussian & BCE Loss (Lambda 1)
+
+>> epoch : 1
+
+>> REC_loss: 155.9742, Dz_loss: 0.0062, Total_loss: 155.9804
+
+![1](https://user-images.githubusercontent.com/82640592/137477478-3a8bca9c-5eb9-487c-bf00-c5c4a898b8a7.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137477522-96f1bfde-a807-4d05-9293-161d0be60ff7.jpg)
+
+<br>
+
+>> epoch : 50
+
+>> REC_loss: 130.9560, Dz_loss: 0.0070, Total_loss: 130.9630
+
+![50](https://user-images.githubusercontent.com/82640592/137477501-3941410f-b30c-413b-b33f-011df2d935a9.jpg)
+![50](https://user-images.githubusercontent.com/82640592/137477532-32ae82b6-48a0-4ddf-abdb-c4c6594a0c12.jpg)
 
 <br>
 
