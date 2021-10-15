@@ -206,26 +206,6 @@
 
 <br>
 
-> ① MMD & Gaussian & BCE Loss (Lambda 1)
-
->> epoch : 1
-
->> REC_loss: 155.5402, MMD_loss: 0.0057, Total_loss: 155.5460
-
-![1](https://user-images.githubusercontent.com/82640592/137476715-61dbf17f-09df-49e3-a88e-d9a127af4049.jpg)
-![1](https://user-images.githubusercontent.com/82640592/137476957-e249db82-0d3e-4b6d-a9cc-20bf57b9a07c.jpg)
-
-<br>
-
->> epoch : 50
-
->> REC_loss: 132.1843, MMD_loss: 0.0036, Total_loss: 132.1879
-
-![50](https://user-images.githubusercontent.com/82640592/137476748-61f1bcdc-295c-46f3-b042-046088acdeff.jpg)
-![50](https://user-images.githubusercontent.com/82640592/137476965-dd1c0c5f-3c54-4742-9707-b2ece085d97b.jpg)
-
-<br>
-
 > ② MMD & Sphere & MSE Loss (Lambda 10)
 
 >> epoch : 1
@@ -246,7 +226,47 @@
 
 <br>
 
-> ② MMD & Sphere & BCE Loss (Lambda 1)
+> ③ GAN & Gaussian & MSE Loss (Lambda 10)
+
+>> epoch : 1
+
+>> REC_loss: 6.3179, Dz_loss: 270.8663, Total_loss: 277.1842
+
+![1](https://user-images.githubusercontent.com/82640592/136036544-bcd67a59-572d-4969-b011-39baf6e8f3e4.jpg)
+![1](https://user-images.githubusercontent.com/82640592/136036324-d712aee0-30eb-4657-a5ca-0f8bbd5e67e2.jpg)
+
+<br>
+
+>> epoch : 100
+
+>> REC_loss: 5.0200, Dz_loss: 265.0048, Total_loss: 270.0248
+
+![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
+![100](https://user-images.githubusercontent.com/82640592/136145370-44899545-f01f-4d23-848b-79f037f14b5d.jpg)
+
+<br>
+
+> * MMD & Gaussian & BCE Loss (Lambda 1)
+
+>> epoch : 1
+
+>> REC_loss: 155.5402, MMD_loss: 0.0057, Total_loss: 155.5460
+
+![1](https://user-images.githubusercontent.com/82640592/137476715-61dbf17f-09df-49e3-a88e-d9a127af4049.jpg)
+![1](https://user-images.githubusercontent.com/82640592/137476957-e249db82-0d3e-4b6d-a9cc-20bf57b9a07c.jpg)
+
+<br>
+
+>> epoch : 50
+
+>> REC_loss: 132.1843, MMD_loss: 0.0036, Total_loss: 132.1879
+
+![50](https://user-images.githubusercontent.com/82640592/137476748-61f1bcdc-295c-46f3-b042-046088acdeff.jpg)
+![50](https://user-images.githubusercontent.com/82640592/137476965-dd1c0c5f-3c54-4742-9707-b2ece085d97b.jpg)
+
+<br>
+
+> * MMD & Sphere & BCE Loss (Lambda 1)
 
 >> epoch : 1
 
@@ -266,28 +286,7 @@
 
 <br>
 
-> ③ GAN & Gaussian & MSE Loss (Lambda 10)
-
->> epoch : 1
-
->> REC_loss: 6.3179, Dz_loss: 270.8663, Total_loss: 277.1842
-
-![1](https://user-images.githubusercontent.com/82640592/136036544-bcd67a59-572d-4969-b011-39baf6e8f3e4.jpg)
-![1](https://user-images.githubusercontent.com/82640592/136036324-d712aee0-30eb-4657-a5ca-0f8bbd5e67e2.jpg)
-
-
-<br>
-
->> epoch : 100
-
->> REC_loss: 5.0200, Dz_loss: 265.0048, Total_loss: 270.0248
-
-![100](https://user-images.githubusercontent.com/82640592/136145391-38519c0b-40e4-4397-8f0c-3f026a477fd0.jpg)
-![100](https://user-images.githubusercontent.com/82640592/136145370-44899545-f01f-4d23-848b-79f037f14b5d.jpg)
-
-<br>
-
-> ③ GAN & Gaussian & BCE Loss (Lambda 1)
+> * GAN & Gaussian & BCE Loss (Lambda 1)
 
 >> epoch : 1
 
