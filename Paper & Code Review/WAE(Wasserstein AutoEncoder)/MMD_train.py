@@ -4,6 +4,7 @@ import torch.nn as nn
 from torch.autograd import Variable
 from kernel import imq_kernel, rbf_kernel
 from prior import sample_pz
+from torch.nn import functional as F
 
 def MMD_train(encoder, decoder, enc_optim, dec_optim, args, train_loader, epoch) :
     encoder.train()
@@ -24,8 +25,13 @@ def MMD_train(encoder, decoder, enc_optim, dec_optim, args, train_loader, epoch)
         '''
         inf(E_pE_q|z(c(X, G(z)))) term
         '''
-        criterion = nn.MSELoss() # cost function : L2-norm
-        recon_loss = criterion(x_recon, images)
+        batch_size = images.size()[0]
+        if args.dataset == 'mnist' : 
+            recon_loss = F.binary_cross_entropy(x_recon, images, reduction='sum')
+        else :
+            criterion = nn.MSELoss() # cost function : L2-norm
+            recon_loss = criterion(x_recon, images)
+        
 
         '''
         Dz(Q, P) term : Maximum Mean Discrepancy(MMD)
@@ -35,7 +41,6 @@ def MMD_train(encoder, decoder, enc_optim, dec_optim, args, train_loader, epoch)
         - 1. imq kernel
         - 2. gaussian kernel (rbf kernel)
         '''
-        batch_size = images.size()[0]
         z_fake = Variable(torch.from_numpy(sample_pz(args.Pz, args.n_z, batch_size))).cuda()  # fake z 생성 : Batch, Latent_dim
         
         mmd_loss = imq_kernel(z, z_fake, h_dim=encoder.n_z, Pz=args.Pz) # input : Qz - encoder(X), Pz - fake z
@@ -50,6 +55,8 @@ def MMD_train(encoder, decoder, enc_optim, dec_optim, args, train_loader, epoch)
 
         enc_optim.step()
         dec_optim.step()
+        
+    data_len = len(train_loader.dataset)
 
     print('====> Epoch: {} Average Recon loss: {:.4f}, Average MMD loss: {:.4f}, Average Total loss: {:.4f}'.format(
-          epoch, REC_loss, MMD_loss, TOT_loss))
+          epoch, REC_loss / data_len, MMD_loss / data_len, TOT_loss / data_len))

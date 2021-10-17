@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 from prior import sample_pz
+from torch.nn import functional as F
 
 def free_params(module: nn.Module):
     for p in module.parameters():
@@ -50,8 +51,6 @@ def GAN_train(encoder, decoder, discriminator, enc_optim, dec_optim, dis_optim, 
         '''
         mean(log(Dr(z_fake)) + log(1-Dr(z_real)))
         '''
-        # torch.log(d_fake).mean().backward(mone)
-        # torch.log(1 - d_real).mean().backward(mone)
 
         dis_loss = (torch.log(d_fake) + torch.log(1 - d_real) * args.Lambda).mean()
         dis_loss.backward(mone)
@@ -73,8 +72,11 @@ def GAN_train(encoder, decoder, discriminator, enc_optim, dec_optim, dis_optim, 
         '''
         mean(c(x, G(z_real)) - lambda * log(Dr(z_real)))
         '''
-        criterion = nn.MSELoss() # cost function : L2-norm
-        recon_loss = criterion(x_recon, images)
+        if args.dataset == 'mnist' : 
+            recon_loss = F.binary_cross_entropy(x_recon, images, reduction='sum')
+        else :
+            criterion = nn.MSELoss() # cost function : L2-norm
+            recon_loss = criterion(x_recon, images)
         d_loss = args.Lambda * (torch.log(d_real)).mean()
 
         recon_loss.backward(one)
@@ -89,5 +91,7 @@ def GAN_train(encoder, decoder, discriminator, enc_optim, dec_optim, dis_optim, 
         enc_optim.step()
         dec_optim.step()
 
+    data_len = len(train_loader.dataset)
+
     print('====> Epoch: {} Average Recon loss: {:.4f}, Average Dz loss: {:.4f}, Average Total loss: {:.4f}'.format(
-          epoch, REC_loss, Dz_loss, REC_loss+Dz_loss))
+          epoch, REC_loss / data_len, Dz_loss / data_len, (REC_loss+Dz_loss) / data_len))
