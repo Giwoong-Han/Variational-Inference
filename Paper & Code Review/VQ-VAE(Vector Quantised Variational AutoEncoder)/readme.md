@@ -9,6 +9,11 @@
 
 > * https://github.com/Giwoong-Han/Variational-Inference/tree/main/Paper%20%26%20Code%20Review/VAE(Variational%20AutoEncoder)
 
+<br>
+
+2. 또한 Encoder는 Continuous가 아닌 Discrete한 Code를 출력합니다.
+
+위의 방법으로 인해 Decoder가 Encoder의 조건들을 무시하고 (Prior Fitting Term -> Loss가 0이 되는) Prior를 그대로 흉내내어 Model의 Latent Variable을 무시하는 Posterior Collapse를 해결할 수 있으며 이미지 뿐만 아니라 음성, 비디오 도메인에서도 적합한 방법론으로 알려져 있습니다.
 
 <br>
 
