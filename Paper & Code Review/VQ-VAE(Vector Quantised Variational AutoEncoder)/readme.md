@@ -13,7 +13,7 @@
 
 2. 또한 Encoder는 Continuous가 아닌 Discrete한 Code를 출력합니다.
 
-> * Discrete한 모델은 Continuous한 모델보다 복잡한 추론, 계획 및 예측 학습에 적합하다고 알려져있다.
+> * Discrete한 모델은 Continuous한 모델보다 복잡한 추론, 계획 및 예측 학습에 적합하다고 알려져 있습니다.
 
 <br>
 
