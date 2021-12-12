@@ -29,7 +29,7 @@
 
 ![Eu](https://user-images.githubusercontent.com/82640592/145713333-65e167e1-2510-48bf-b8da-a12480dcfe07.jpg)
 
-
+> * 즉, D-dim긴 K개의 Vector 중 Encoder의 Output과 가장 Euclidean Distance가 가장 가까운 k를 찾아 나중에 Decoder의 인풋으로 사용할 Zq(x)라 정의합니다.
 
 2. Model
 
