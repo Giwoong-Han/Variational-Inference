@@ -6,7 +6,7 @@
 
 2) Wasserstein AutoEncoder (WAE)
 
-3) 
+3) Vector Quantised Variational AutoEncoder (VQ-VAE)
 
 4) Poincaré Wasserstein AutoEncoder (PWA)
 
