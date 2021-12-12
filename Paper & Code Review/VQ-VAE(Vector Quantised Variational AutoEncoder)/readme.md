@@ -27,7 +27,11 @@
 
 > * Encoder를 통해서 출력되는 Ze(x)는 D-dimension의 형태라고 가정하면 저자는 Prior로 설정한 KxD의 Embedding space에서 Ze(x)와 Euclidean distance가 가장 가까운 e하나를 다음과 같은 수식을 통해 구합니다. 나머지는 현재 학습에서 Forward, Backward 모두 반영되지 않습니다.
 
+<br>
 
+![Eu](https://user-images.githubusercontent.com/82640592/145713280-2528d31c-a207-4243-96a6-b29afde653aa.jpg)
+
+<br>
 
 2. Model
 
