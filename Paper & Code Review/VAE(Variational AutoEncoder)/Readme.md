@@ -133,5 +133,5 @@
 3) 목적에 적합한 최적의 Latent dim, Feature Extraction을 위한 Neural Network 설계에 대한 설명이 없습니다.
 
 > * 해당 한계점을 보완하기위해 Latent Space의 각 Component간의 관계를 자동으로 학습하는 Autoregression 방법론이 등장하였습니다.
->> - VQ(Vector Quantization)-VAE에 대한 개념을  Neural Discrete Representation Learning (ICLR 2020)
+>> - VQ(Vector Quantization)-VAE에 대한 개념을  Neural Discrete Representation Learning (NIPS 2017)
 >> - Variational Autoencoder with Learned Latent Structure(VAELLS) (AISTATS 2021)
