@@ -35,6 +35,8 @@
 
 2. Model
 
+![t](https://user-images.githubusercontent.com/82640592/145817713-2ca74f04-72d6-4db9-bcda-fbbedc311996.jpg)
+
 <br>
 
 ## Code Review
