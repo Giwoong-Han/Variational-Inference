@@ -115,7 +115,7 @@
 > * 또한 Latent Structure의 정보를 반영하기위해 Curvature가 0(Euclidean space)이 아닌 Hyperbolic Space(음의 Curvature)나 Spherical Space(양의 Curvature) 위에서 정의한 Latent Space를 사용하는 방법론이 등장하였습니다.
 
 >> - Hyperspherical Variational Auto-Encoders (UAI 2018)
->> - Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders (NeurIPS 2019)
+>> - Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders (NIPS 2019)
 >> - Mixed-curvature Variational Autoencoders (ICLR 2020)
 
 <br>
