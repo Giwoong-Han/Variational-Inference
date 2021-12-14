@@ -65,7 +65,7 @@
 
 >> ③ Commitmet Loss
 
->> * 학습에 사용가능한 Parameter 중 Embedding Space의 K에 대한 부분에 대해 생각해보면, 해당 값이 K배 증가 시 Embedding Space 또한 K배로 증가하여 학습 시간이 매우 오래걸릴 수 있습니다. 따라서 저자는 빠른 수렴을 위해 위와 같은 Commitment Loss를 통하여 Embedding Space와 Encoder의 Output이 유사해지도록 설계하였습니다. 여기서 Beta는 0.1~2.0까지 변경해도 Robust한 결과를 얻을 수 있고 저자는 0.25를 실험에 사용하였습니다.
+>> * 학습에 사용가능한 Parameter 중 Embedding Space의 K에 대한 부분에 대해 생각해보면, 해당 값이 K배 증가 시 Embedding Space 또한 K배로 증가하여 학습 시간이 매우 오래걸릴 수 있습니다. 따라서 저자는 빠른 수렴을 위해 위와 같은 Commitment Loss를 통하여 Embedding Space와 Encoder의 Output이 유사해지도록 설계하였습니다. 여기서 Beta는 0.1~2.0까지 변경해도 Robust한 결과를 얻을 수 있고 저자는 0.25값을 실험에 사용하였습니다.
 
 ## Code Review
 
