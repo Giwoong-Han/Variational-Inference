@@ -45,6 +45,7 @@
 
 3. Loss Function
 
+![1](https://user-images.githubusercontent.com/82640592/145991451-a9d21c75-22cf-4702-be9a-e20c185e70f7.jpg)
 
 
 ## Code Review
