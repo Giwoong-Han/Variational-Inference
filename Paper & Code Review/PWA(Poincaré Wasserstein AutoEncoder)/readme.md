@@ -5,18 +5,14 @@
 
 ## Short Review
 
-1. 본 논문은 .
+추후 업데이트 하겠습니다.
 
 <br>
 
 ## Methods
 
-- D
-
 <br>
 
 ## Code Review
-
-1. main.py 
 
 <br>
