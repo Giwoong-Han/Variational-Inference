@@ -43,6 +43,10 @@
 
 <br>
 
+3. Loss Function
+
+
+
 ## Code Review
 
 1. main.py 
