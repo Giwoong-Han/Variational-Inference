@@ -39,7 +39,7 @@
 
 > * 기존의 VAE에서는 encoder의 아웃풋을 그대로 Latent Space로 사용합니다. 저자는 Learnable한 Latent space를 만들기 위하여 위와 같이 Ze(x)와 Embedding space를 사용하였습니다. Embedding Space는 K만큼의 Size를 가지는 Discrete한 Latent Space로 구성되어 각 D-dimension만큼의 크기로 설정되어 있습니다. 여기서 초기 Embedding Space의 값들은 Gaussian Distribution이 아닌 Uniform Distribution을 따릅니다. 그 이유로 저자는 인코더의 Parameter의 설정과 유사하게 설정하면 ELBO의 KL-divergence term의 값이 항상 Constant로 나와 학습과정에서 무시할 수 있다고 말합니다.
 
-> * Forward Path에서는 먼저 Encoder를 통해서 나온 Ze(x)와 앞서 1.에서 정의한 Euclidean distance를 기반으로 가장 유사한 e를 찾습니다. 위의 그림은 Embedding Space의 2번째 Latent가 가장 유사하다는 가정이 전제되어 있습니다. 그 이후 Decoder에 가장 유사했던 e=Zq(x)를 input으로 Reconstruction을 진행합니다. 다음은 Decoder에서 부터 순차적으로 Gradient를 구한 후 흘려주는 Backward를 진행합니다. 여기서 주목해서 봐야할 점은 해당 Forward Path를 통해 얻은 Gradient가 다시 Embedding Space의 e에 도달하는 것이 아닌 Encoder의 Output인 Ze(x)에 전달해 준다는 것입니다. 즉, 이 방법을 통해 Prior Fitting이 아닌 Encoder가 Reconstruction이 잘 되도록 유용한 정보만 줄 수 있어 기존의 VAE의 한계점이었던 Posterior Collapse를 해결할 수 있다고 말합니다.
+> * Forward Path에서는 먼저 Encoder를 통해서 나온 Ze(x)와 앞서 1.에서 정의한 Euclidean distance를 기반으로 가장 유사한 e를 찾습니다. 위의 그림은 Embedding Space의 2번째 Latent가 가장 유사하다는 가정이 전제되어 있습니다. 그 이후 Decoder에 가장 유사했던 e=Zq(x)를 input으로 Reconstruction을 진행합니다. Forward Process가 종료되고 Decoder에서부터 순차적으로 Gradient를 구한 후 흘려주는 Backward를 진행합니다. 여기서 주목해야할 점은 해당 Forward Path를 통해 얻은 Gradient가 다시 Embedding Space의 e에 흘려주는 것이 아 Encoder의 Output인 Ze(x)에 전달해 준다는 것입니다. 즉, 이 방법을 통해 Prior Fitting이 아닌 Encoder가 Reconstruction이 잘 되도록 유용한 정보만 줄 수 있어 기존의 VAE의 한계점이었던 Posterior Collapse를 해결할 수 있다고 말합니다.
 
 <br>
 
