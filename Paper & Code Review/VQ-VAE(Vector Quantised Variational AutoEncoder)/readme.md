@@ -17,7 +17,7 @@
 
 <br>
 
-위의 방법으로 인해 Decoder가 Encoder의 조건들을 무시하고 (Prior Fitting Term -> Loss가 0이 되는) Prior를 그대로 흉내내어 Model의 Latent Variable을 무시하는 Posterior Collapse를 해결할 수 있습니다. 또한 이미지 뿐만 아니라 음성, 비디오 Domain에서도 좋은 결과를 줄 수 .
+위의 방법으로 인해 Decoder가 Encoder의 조건들을 무시하고 (Prior Fitting Term -> Loss가 0이 되는) Prior를 그대로 흉내내어 Model의 Latent Variable을 무시하는 Posterior Collapse를 해결할 수 있습니다. 또한 이미지 뿐만 아니라 음성, 비디오 Domain에서도 좋은 결과를 줄 수 있습니다.
 
 ## Methods
 
