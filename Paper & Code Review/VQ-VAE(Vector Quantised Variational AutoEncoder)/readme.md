@@ -39,7 +39,7 @@
 
 > * 기존의 VAE에서는 encoder의 아웃풋을 그대로 Latent Space로 사용합니다. 저자는 Learnable한 Latent space를 만들기 위하여 위와 같이 Ze(x)와 Embedding space를 사용하였습니다. Embedding Space는 K만큼의 Size를 가지는 Discrete한 Latent Space로 구성되어 각 D-dimension만큼의 크기로 설정되어 있습니다. 여기서 초기 Embedding Space의 값들은 Gaussian Distribution이 아닌 Uniform Distribution을 따릅니다. 그 이유로 저자는 인코더의 Parameter의 설정과 유사하게 설정하면 ELBO의 KL-divergence term의 값이 항상 Constant로 나와 학습과정에서 무시할 수 있다고 말합니다.
 
-> * Forward Path에서는 먼저 Encoder를 통해서 나온 Ze(x)와 앞서 1.에서 정의한 Euclidean distance를 기반으로 가장 유사한 e를 찾습니다. 위의 그림은 Embedding Space의 2번째 Latent가 가장 유사하다는 가정이 전제되어 있습니다. 그 이후 Decoder에 가장 유사했던 e=Zq(x)를 input으로 Reconstruction을 진행합니다. Forward Process가 종료되고 Decoder에서부터 순차적으로 Gradient를 구한 후 흘려주는 Backward를 진행합니다. 여기서 주목해야할 점은 해당 Forward Path를 통해 얻은 Gradient가 다시 Embedding Space의 e에 흘려주는 것이 아 Encoder의 Output인 Ze(x)에 전달해 준다는 것입니다. 즉, 이 방법을 통해 Prior Fitting이 아닌 Encoder가 Reconstruction이 잘 되도록 유용한 정보만 줄 수 있어 기존의 VAE의 한계점이었던 Posterior Collapse를 해결할 수 있다고 말합니다.
+> * Forward Path에서는 먼저 Encoder를 통해서 나온 Ze(x)와 앞서 1.에서 정의한 Euclidean distance를 기반으로 가장 유사한 e를 찾습니다. 위의 그림은 Embedding Space의 2번째 Latent가 가장 유사하다는 가정이 전제되어 있습니다. 그 이후 Decoder에 가장 유사했던 e=Zq(x)를 input으로 Reconstruction을 진행합니다. Forward Process가 종료되고 Decoder에서부터 순차적으로 Gradient를 구한 후 흘려주는 Backward를 진행합니다. 여기서 주목해야할 점은 해당 Forward Path를 통해 얻은 Gradient가 다시 Embedding Space의 e에 흘려주는 것이 아니라 Encoder의 Output인 Ze(x)에 전달해 준다는 것입니다. 즉, 이 방법을 통해 Prior Fitting이 아닌 Encoder가 Reconstruction이 잘 되도록 유용한 정보만 줄 수 있어 기존의 VAE의 한계점이었던 Posterior Collapse를 해결할 수 있다고 말합니다.
 
 <br>
 
@@ -49,7 +49,7 @@
 
 <br>
 
-> * 위와 같이 3개의 Term으로 Loss Fuction을 정의합니다.
+> * 위와 같이 3개의 Term으로 Loss Fuction을 정의합니다. 위의 수식에서 Sg(Stop gradient)는 Forward시 Patial Derivatives가 0으로 학습에 반영되지 않습니다.
 
 >> ① Reconstruction Term
 
@@ -59,9 +59,13 @@
 
 >> ② Codebook Term
 
+>> * Backward에 반영되는 부분은 e로 Encoder에서 얻은 Output Ze(x)와 Euclidean Distance가 더 가까워지도록 합니다.
+
 <br>
 
->> ③
+>> ③ Commitmet Loss
+
+>> * 학습에 사용가능한 Parameter 중 Embedding Space의 K에 대한 부분에 대해 생각해보면, 값이 너무 커지게되면 Embedding Space가 K배로 증가하여 학습에 시간이 매우 오래걸릴 수 있습니다. 따라서 저자는 위와 같은 Commitment Loss를 통하여 Embedding Space와 Encoder의 Output이 유사해지도록 설계하였습니다. 여기서 Beta는 0.1~2.0까지 변경해도 Robust한 결과를 얻을 수 있고 저자는 0.25를 실험에 사용하였습니다.
 
 ## Code Review
 
