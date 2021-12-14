@@ -45,8 +45,23 @@
 
 3. Loss Function
 
-![1](https://user-images.githubusercontent.com/82640592/145991451-a9d21c75-22cf-4702-be9a-e20c185e70f7.jpg)
+![1](https://user-images.githubusercontent.com/82640592/145993065-dd04b847-76e9-4759-a8f6-e76ae3b0b229.jpg)
 
+<br>
+
+> * 위와 같이 3개의 Term으로 Loss Fuction을 정의합니다.
+
+>> ① Reconstruction Term
+
+>> * Embedding Space에서 뽑은 Zq(x)가 주어졌을때 Decoder를 통해 얻은 Output Reconstruction이 잘 되도록 제약하는 Term입니다. Encoder는 해당 Term에 관여하지 않습니다.
+
+<br>
+
+>> ② Codebook Term
+
+<br>
+
+>> ③
 
 ## Code Review
 
