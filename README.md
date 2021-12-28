@@ -12,4 +12,6 @@
 
 ## 2. Paper Review
 
-1) Variational Autoencoder with Learned Latent Structure (VAELLS)
+1) Improved Variational Inference with Inverse Autoregressive Flow (IAF-VAE)
+
+2) Variational Autoencoder with Learned Latent Structure (VAELLS)
