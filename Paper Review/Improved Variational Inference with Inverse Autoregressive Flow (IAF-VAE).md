@@ -11,3 +11,11 @@
 
 ## Methods
 
+1. Normalizing Flow (NF)
+- ELBO의 문제점에 대한 그림
+- 수식 설명
+
+2. Inverse Autoregressive Flow (IAF)
+- 구조
+- LSTM idea 설명
+- 최종 loss
