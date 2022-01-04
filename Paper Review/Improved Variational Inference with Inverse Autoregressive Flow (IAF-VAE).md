@@ -27,7 +27,9 @@
 > * 위와 같이 Jacobian Determinant를 각 반복 횟수마다 구할 수 있으므로 최종 시점 T에서의 학습이 가능하도록 설계할 수 있습니다. 그리고 역변환이 가능한 Jacobian Determinant라는 가정이 포함되면 아래와 같이 아주 단순한 수식으로 Transformation Function을 만들 수 있습니다.
 <br>
 <수식 추가 6>
+<br>
 
+참고 : https://www.ritchievink.com/blog/2019/11/12/another-normalizing-flow-inverse-autoregressive-flows/
 2. Inverse Autoregressive Transformation
 > * NF -> Inverse 적용한 부분 설명
 
