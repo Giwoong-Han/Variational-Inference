@@ -12,10 +12,15 @@
 ## Methods
 
 1. Normalizing Flow (NF)
-- ELBO의 문제점에 대한 그림
-- 수식 설명
+
+> * 우선 14년 저자가 발표했던 VAE의 ELBO (Evidence Lower Bounded)를 시각화한 그림입니다.
+<그림 추가>
+
+
+> * ELBO의 문제점에 대한 그림
+> * 수식 설명
 
 2. Inverse Autoregressive Flow (IAF)
-- 구조
-- LSTM idea 설명
-- 최종 loss
+> * 구조
+> * LSTM idea 설명
+> * 최종 loss
