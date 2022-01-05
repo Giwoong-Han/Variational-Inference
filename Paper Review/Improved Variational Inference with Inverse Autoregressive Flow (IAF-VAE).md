@@ -30,6 +30,7 @@
 <br>
 
 참고 : https://www.ritchievink.com/blog/2019/11/12/another-normalizing-flow-inverse-autoregressive-flows/
+https://bjlkeng.github.io/posts/variational-autoencoders-with-inverse-autoregressive-flows/
 2. Inverse Autoregressive Transformation
 > * NF -> Inverse 적용한 부분 설명
 
