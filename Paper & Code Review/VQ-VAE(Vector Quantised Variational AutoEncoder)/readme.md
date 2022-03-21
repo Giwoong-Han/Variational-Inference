@@ -23,7 +23,7 @@
 
 1. Discrete Latent Variable
 
-> * 저자는 Discrete하고 Learnable한 Latent를 만들기위해 KxD 사이즈의 Embedding space를 도입하였습니다. Embedding space의 각 Vector들은 Uniform distribution을 .
+> * 저자는 Discrete하고 Learnable한 Latent를 만들기위해 KxD 사이즈의 Embedding space를 도입하였습니다. Embedding space의 각 Vector들은 Uniform distribution을 따릅니다.
 
 > * Encoder를 통해서 출력되는 Ze(x)는 D-dimension의 형태라고 가정하면 저자는 Prior로 설정한 KxD의 Embedding space에서 Ze(x)와 Euclidean distance가 가장 가까운 e하나를 다음과 같은 수식을 통해 구합니다. 나머지는 현재 학습에서 Forward, Backward 모두 반영되지 않습니다.
 
