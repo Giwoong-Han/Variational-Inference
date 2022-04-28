@@ -49,7 +49,7 @@
 
 <br>
 
-> * 위와 같이 3개의 Term으로 Loss Fuction을 정의합니다. 위의 수식에서 Sg(Stop gradient)는 Forward시 Patial Derivatives가 0으로 학습에 반영되지 않습니다.
+> * 위와 같이 3개의 Term으로 Loss Fuction을 정의합니다. 위의 수식에서 Sg(Stop gradient)는 Forward시 Partial Derivatives가 0으로 학습에 반영되지 않습니다.
 
 >> ① Reconstruction Term
 
